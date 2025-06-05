@@ -116,50 +116,29 @@
          }         
       </script>
       <script>
-         window.addEventListener('DOMContentLoaded', () => 
-         {
-             fetch('./AMD_Radar_vf.csv')
-                 .then(function (resp) {
-                     return resp.text();
-                 })
-                 .then(function (csv) {
-                     var entries = d3.csvParse(csv, function (row) {
-                         return toEntry(row);
-                     });
-                     listofTags(entries);    
-                     draw_radar(entries, -1);
-                 });
-                            document.getElementById('resetRadarBtn').addEventListener('click', () => 
-            {
-               document.querySelectorAll('.tag-container .tag.selected').forEach(tagEl => 
-               {
-                  tagEl.classList.remove('selected');
-               });
-               window.selectedZoomedQuadrant = -1;
-               alert('1');
-               fetch('./AMD_Radar_vf.csv')
-                 .then(function (resp) {
-                     return resp.text();
-                 })
-                 .then(function (csv) {
-                     var entries = d3.csvParse(csv, function (row) {
-                         return toEntry(row);
-                     });
-                     alert('2');
-
-                     listofTags(entries);    
-                     alert('3');
-                     d3.select("#radar").selectAll("*").remove();
-                     draw_radar(entries, -1);
-                     onQuadrantClick(-1);
-                 });
-
+      let cachedEntries = [];
+      window.addEventListener('DOMContentLoaded', () => 
+      {
+         fetch('./AMD_Radar_vf.csv')
+            .then(resp => resp.text())
+            .then(csv => {
+                  cachedEntries = d3.csvParse(csv, toEntry);
+                  listofTags(cachedEntries);
+                  draw_radar(cachedEntries, -1);
             });
- 
-         });
-      </script>
- 
 
+      document.getElementById('resetRadarBtn').addEventListener('click', () => 
+      {
+            document.querySelectorAll('.tag-container .tag.selected').forEach(tagEl => {
+                  tagEl.classList.remove('selected');
+            });
+            window.selectedZoomedQuadrant = -1;
+            d3.select("#radar").selectAll("*").remove();
+            draw_radar(cachedEntries, -1);
+            onQuadrantClick(-1);
+         });
+   });      
+   </script>
       <div id="blipModal" class="modal">
          <div class="modal-content">
             <span class="close-btn">&times;</span>
