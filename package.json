@@ -1,9 +1,9 @@
 {
-  "name": "zalando-tech-radar",
+  "name": "AMD-radar",
   "version": "2024.1.0",
-  "description": "Visualizing our technology choices",
-  "homepage": "https://github.com/zalando/tech-radar#readme",
-  "repository": "https://github.com/zalando/tech-radar.git",
+  "description": "Visualizing our Architecture radar choices",
+  "homepage": "https://github.com/sportingdurutti/AMD-Radar/#readme",
+  "repository": "https://github.com/sportingdurutti/AMD-Radar.git",
   "license": "MIT",
   "private": true,
   "directories": {
