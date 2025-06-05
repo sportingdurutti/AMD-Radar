@@ -129,12 +129,7 @@
                      listofTags(entries);    
                      draw_radar(entries, -1);
                  });
-         });
-      </script>
-      <script>
-         window.addEventListener('DOMContentLoaded', () => 
-         {
-            document.getElementById('resetRadarBtn').addEventListener('click', () => 
+                            document.getElementById('resetRadarBtn').addEventListener('click', () => 
             {
                document.querySelectorAll('.tag-container .tag.selected').forEach(tagEl => 
                {
@@ -160,9 +155,10 @@
                  });
 
             });
+ 
          });
       </script>
-
+ 
 
       <div id="blipModal" class="modal">
          <div class="modal-content">
