@@ -1,9 +1,9 @@
 {
-  "name": "AMD-radar",
+  "name": "amd_radar",
   "version": "2024.1.0",
   "description": "Visualizing our Architecture radar choices",
-  "homepage": "https://github.com/sportingdurutti/AMD-Radar/#readme",
-  "repository": "https://github.com/sportingdurutti/AMD-Radar.git",
+  "homepage": "",
+  "repository": "",
   "license": "MIT",
   "private": true,
   "directories": {
