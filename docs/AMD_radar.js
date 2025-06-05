@@ -892,6 +892,8 @@ function onQuadrantClick(quadrant) {
   }
 }
 
+window.onQuadrantClick = onQuadrantClick
+
 
 function animateViewBox(svgElement, start, end, duration = 1000, easing = d3.easeCubicInOut, onEnd) {
   const interpolate = d3.interpolateArray(start, end);
