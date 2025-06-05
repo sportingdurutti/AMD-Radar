@@ -141,6 +141,7 @@
                   tagEl.classList.remove('selected');
                });
                window.selectedZoomedQuadrant = -1;
+               alert('1');
                fetch('./AMD_Radar_vf.csv')
                  .then(function (resp) {
                      return resp.text();
@@ -149,8 +150,10 @@
                      var entries = d3.csvParse(csv, function (row) {
                          return toEntry(row);
                      });
+                     alert('2');
+
                      listofTags(entries);    
-                     alert('ssasa');
+                     alert('3');
                      d3.select("#radar").selectAll("*").remove();
                      draw_radar(entries, -1);
                      onQuadrantClick(-1);
