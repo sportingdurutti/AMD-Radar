@@ -731,4 +731,11 @@ This technique bridges:
 3. Platform usability
 4. Search, metadata, and classification strategy","Pesquisa
 Descoberta",new
-CluedIn,ESPERAR,FERRAMENTAS,True,neu,,,
+CluedIn,ESPERAR,FERRAMENTAS,True,new,"CluedIn - Microsoft Master Data Management
+Modern master data management that integrates seamlessly with the Microsoft Data and Analytics suite to deliver data governance","Metadata
+Catalogação
+Governação",new
+Scala,ESPERAR,LINGUAGENS & FRAMEWORKS,True,new,"The Scala Programming Language
+Pick your favorite notebook. Run massively distributed big data pipelines; train NLP or ML models; perform numerical analysis; visualize data and more
+Reactive UI's backed by types. Use the same Scala libraries across the stack. Integrate with the JavaScript library and tooling ecosystem.","Processamento
+Consulta",new
