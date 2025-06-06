@@ -70,14 +70,6 @@ function filterRadar(quadrant) {
         });
 }
 
-function openModal1(content) 
-{
-  const modal = document.getElementById("blipModal");
-  const modalText = document.getElementById("modalText");
-  modalText.innerHTML = content;
-  modal.style.display = "block";
-}
-
 function openModal(content) {
   const existing = document.getElementById("modalContainer");
   if (existing) existing.remove();
@@ -106,6 +98,13 @@ function closeModal() {
   const modal = document.getElementById("blipModal");
   modal.style.display = "none";
 }
+
+
+function zoomToBlip(d) 
+{
+  openModal(`<div class="modal-title">${d.label}</div><div class="modal-description">${d.description}</div>`);
+}
+
 
 function zoomToQuadrant(quadrant) {
  {

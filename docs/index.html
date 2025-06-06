@@ -122,6 +122,7 @@
       </script>
       <script>
       let cachedEntries = [];
+      window.modalOpen = false;
       window.addEventListener('DOMContentLoaded', () => 
       {
          fetch('./AMD_Radar_vf.csv')
@@ -160,22 +161,43 @@
                onQuadrantClick(-1); // 🟢 Reset view
                return;
             }
-
-            const matches = cachedEntries.filter(entry =>
-               entry.label.toLowerCase().includes(query)
-            );
+            const matches = cachedEntries.filter(entry =>entry.label.toLowerCase().includes(query));
             const uniqueQuadrants = [...new Set(matches.map(d => d.quadrant))];
             targetQuadrant = uniqueQuadrants[0];
-            if (uniqueQuadrants.length === 1)
+            if (matches.length === 1) 
             {
                if (window.selectedZoomedQuadrant != targetQuadrant)
                {
                      zoomToQuadrant(targetQuadrant);
                } 
-            } 
-            else 
-            {
-               onQuadrantClick(-1); // Reset view
+              if (window.modalOpen == false)
+               {
+                  zoomToBlip(matches[0]);
+                  window.modalOpen = true;
+               }
+            }
+            else
+             {
+               //const uniqueQuadrants = [...new Set(matches.map(d => d.quadrant))];
+               //targetQuadrant = uniqueQuadrants[0];
+               if (window.modalOpen)
+               {
+                  const modal = document.getElementById("modalContainer");                  
+                  modal.style.display = "none";
+                  window.modalOpen = false;
+               }
+
+               if (uniqueQuadrants.length === 1)
+               {
+                  if (window.selectedZoomedQuadrant != targetQuadrant)
+                  {
+                        zoomToQuadrant(targetQuadrant);
+                  } 
+               } 
+               else 
+               {
+                  onQuadrantClick(-1); // Reset view
+               }
             }
          }, 300);
       });
