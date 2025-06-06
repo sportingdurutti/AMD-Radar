@@ -1,53 +1,53 @@
-name,ring,quadrant,isNew,status,description,tag,Unnamed: 7
-CSV,ADOPT,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
+name,ring,quadrant,isNew,status,description,tag,moved
+CSV,ADOTAR,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
 <p>Formato de arquivo simples, ideal para cenários de compatibilidade e pipelines de ingestão.</p>
 <p>Carece de schema, metadados e facilidades de compressão</p>
 <p>Armazena dados em formato estruturado, onde cada linha representa um registro e os campos dentro de cada linha são separados por vírgulas (ou outro delimitador). </p>","Serialização
 Persistência",none
-Delta Tables,ADOPT,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Formato de serialização de dados</strong></p>
+Delta Tables,ADOTAR,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Formato de serialização de dados</strong></p>
 <p>Formato padrão para dados semiestruturados; usado em APIs, logs e serviços nativos de Cloud</p>
 <p>Compatível com a maioria dos serviços do Azure</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/databricks/data-engineering/tables-views"">Delta Tabes</p>","Serialização
 Persistência",new
-JSON,ADOPT,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
+JSON,ADOTAR,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
 <p><strong><a href=""https://www.json.org/json-en.html"">JSON</p>","Serialização
 Persistência",none
-Parquet,ADOPT,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
+Parquet,ADOTAR,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
 <p>Formato colunar, compactado, schema-aware</p>
 <p>Formato preferencial para análise e processamento de grabdes volumes de dados</p>
 <p><strong><a href=""https://parquet.apache.org/docs/"">Parquet</p>","Serialização
 Persistência",none
-PySpark,ADOPT,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Linguagens de Processamento Distribuido</strong></p>
+PySpark,ADOTAR,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Linguagens de Processamento Distribuido</strong></p>
 <p>API Python amplamente utilizada para Apache Spark</p>
 <p>Utilizada em cenários de processamento de dados escaláveis e distribuidos em ofertas como Synapse, Fabric e Databricks</p>
 <p><strong><a href=""https://www.databricks.com/glossary/pyspark"">PySpark</p>",Processamento,none
-Spark SQL,ADOPT,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Linguagens de Processamento Distribuido</strong></p>
+Spark SQL,ADOTAR,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Linguagens de Processamento Distribuido</strong></p>
 <p>Interface SQL declarativa para Spark</p>
 <p>Permite transformações escaláveis e consultas em arquivos suportados em data lake e parquet/delta</p>
 <p><strong><a href=""https://www.databricks.com/glossary/what-is-spark-sql"">Spark SQL</p>",Processamento,new
-XML,ADOPT,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
+XML,ADOTAR,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Formato de serialização de dados</strong></p>
 <p>Formato legado ainda usado em sistemas empresariais</p>
 <p>Raramente utilizado em pipelines modernos, a menos que seja necessário para garantir cenários de conformidade ou interoperabilidade</p>
 <p>XML, que significa Extensible Markup Language (Linguagem de Marcação Extensível), é uma linguagem de marcação que fornece regras para definir dados. É uma forma flexível de estruturar e representar dados em documentos. XML permite criar linguagens de marcação específicas para domínios específicos, como gráficos vetoriais (SVG), expressões matemáticas (MathML) e feeds de notícias (RSS). </p>","Serialização
 Persistência",none
-Kusto Query Language (KQL),ADOPT,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Linguagens de Consulta</strong></p>
+Kusto Query Language (KQL),ADOTAR,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Linguagens de Consulta</strong></p>
 <p>Linguagem para consultar dados de telemetria no Azure Monitor, Log Analytics e na camada de monitoramento do Microsoft Fabric.</p>
 <p>Essencial para definir dashboards personalizados, alertas e análises avançadas.</p>
 <p>Não sendo uma linguagem de programação de uso geral, é , no contexto do stack tecnolológico de observabilidade do Azure, uma linguagem de suporte essencial.</p>",Consulta,new
-Azure Monitor Python SDK,ASSESS,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Modelação e Frameworks</strong></p>
+Azure Monitor Python SDK,AVALIAR,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Modelação e Frameworks</strong></p>
 <p>Utilização de Python para engenharia de dados/ML beneficiando dos SDKs do Azure para registro e telemetria, por exemplo, azure-monitor-opentelemetry-exporter ou azure.identity com registro estruturado em pipelines.</p>","Monitorização
 Observabilidade",new
-Data Pipeline Observability,ADOPT,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Modelação e Frameworks</strong></p>
+Data Pipeline Observability,ADOTAR,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Modelação e Frameworks</strong></p>
 <p>Embora não sejam ""linguagens"" propriamente ditas, os pipelines do Data Factory possuem ""construtores nativos"" de observabilidade incorporadas, incluindo logs em nível de atividade, detalhes de erros, rastreamento de novas tentativas e integração com o Log Analytics.
 Para o Microsoft Fabric, a nova camada de orquestração de pipelines segue a mesma abordagem.</p>","Monitorização
 Observabilidade",new
-Power BI Usage Telemetry,ASSESS,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Modelação e Frameworks</strong></p>
+Power BI Usage Telemetry,AVALIAR,LINGUAGENS & FRAMEWORKS,True,new,"<p><strong>Modelação e Frameworks</strong></p>
 <p>No Microsoft Fabric, é possivel implementar capacidades de observabilidade no Power BI usando expressões DAX combinadas com fontes de telemetria.(ex: duração de consultas, falhas de atualização, comportamento do usuário) </p>","Monitorização
 Observabilidade",new
-DAX,ADOPT,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Modelação e Frameworks</strong></p>
+DAX,ADOTAR,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Modelação e Frameworks</strong></p>
 <p>No Microsoft Fabric, é possivel implementar capacidades de observabilidade no Power BI usando expressões DAX combinadas com fontes de telemetria.(ex: duração de consultas, falhas de atualização, comportamento do usuário) </p>","Monitorização
 Observabilidade",none
-Application Insights,ASSESS,FERRAMENTAS,True,new,"<p><strong>Monitorização e Observabilidade</strong></p>
+Application Insights,AVALIAR,FERRAMENTAS,True,new,"<p><strong>Monitorização e Observabilidade</strong></p>
 <p>Ferramenta customizada para implementar capacidades de monitorização e observabilidade de aplicações<p>
 <p>É uma ferramenta de monitoramento e diagnóstico (parte do Azure Monitor) usada para rastrear: </p>
 <p>1. Desempenho aplicacional</p>
@@ -63,7 +63,7 @@ Application Insights,ASSESS,FERRAMENTAS,True,new,"<p><strong>Monitorização e O
 <p>3. Monitorização de SLO (Service Level Objectives) e EB (Error Budget Monitoring)</p>
 <p><strong><a href=""""https://learn.microsoft.com/pt-pt/azure/azure-monitor/app/app-insights-overview"""">Application Insights</p>""","Monitorização
 Observabilidade",new
-Azure Automation,ASSESS,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
+Azure Automation,AVALIAR,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
 <p>Ferramenta de utilização em cenários específicos de automação de infraestrutura, mas que tem vindo a ser progressivamente substituida ou complementada por ferramentas modernas de orquestração no contexto da plataforma de dados.
 <p>É uma ferrameta vocacionada para automatizar tarefas mais operacionais, de automação de infraestrutura e plataforma em ambientes híbridos ou legados do Azure.</p>
 <p>No contexto atual, o ""Azure Automation"" não justifica a adoção de uma nova técnica por si só, a não ser que a plataforma já esteja a evoluir provavelmente em torno de: </p>
@@ -71,14 +71,14 @@ Azure Automation,ASSESS,FERRAMENTAS,True,new,"<p><strong>Segurança e Operaçõe
 <p>2. Infraestrutura como código</p>
 <p>3. Fluxos de trabalho ""Servless""</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/automation/overview"">Automação do Azure</p>",Automação,new
-Azure Bastion,ASSESS,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
+Azure Bastion,AVALIAR,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
 <p>Ferramenta de segurança de infraestrutura de suporte, utilizada em cenários de acesso remoto seguro, adequado a cargas de trabalho baseadas em VMs, e/ou acessos periféricos a plataformas de dados modernas baseadas em PaaS ou outros enários hibridos</p>
 <p>Funciona como um serviço de ""jumpbox"" seguro e permite acessos RDP/SSH baseado via browsers a VMs do Azure sem a necessidade de exposição de IPs públicos.</p>
 <p>Mantêm relevância enquanto a segurança de VMs ou segurança de jump-hosts é relevante, como ferramenta de suporte na adoção da maioria das arquiteturas de dados modernas.</p>
 <p>Não justifica normalmente a adoção de uma técnica especifica ou dedicada a menos que estejam a ser considerados de forma relevante cenários híbridos ou com uso intenso de IaaS.</p>
 <p><strong><a href=""https://azure.microsoft.com/pt-pt/products/azure-bastion"">Azure Bastion</p>","Segurança
 Operações",new
-Azure Log Analytics,TRIAL,FERRAMENTAS,True,new,"<p><strong>Monitorização e Observabilidade</strong></p>
+Azure Log Analytics,TESTAR,FERRAMENTAS,True,new,"<p><strong>Monitorização e Observabilidade</strong></p>
 <p>Mecanismo analítico central por trás do Azure Monitor></p>
 <p>Suporta cenários de consultas de telemetria, dashborads, alertas e integrações</p>
 <p>Ttotalmente integrado com a linguagem KQL e outros serviços do Azure.</p>
@@ -89,20 +89,20 @@ Azure Log Analytics,TRIAL,FERRAMENTAS,True,new,"<p><strong>Monitorização e Obs
 <p>4. Fontes de telemetria personalizadas (por exemplo, consultas KQL)</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview?tabs=simple"">Log Analytics in Azure Monitor</p>","Monitorização
 Observabilidade",new
-Azure Private Endpoint,TRIAL,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+Azure Private Endpoint,TESTAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p>Interface de rede específica utilizada para acesso a serviços de forma privada por meio do Link Privado do Azure</p>
 <p>Ferramenta essencial para permitir o acesso seguro aos dados no nível de IP.</p>
 <p>Um ""Private Endpoint"" é considerado um recurso concreto — a interface de rede real criada na VNet para representar esse acesso privado.</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview"">Azure Private Endpoint</p>","Segurança
 Operações",new
-Biblioteca de Logging,TRIAL,FERRAMENTAS,True,new,"<p><strong>Monitorização e Observabilidadev
+Biblioteca de Logging,TESTAR,FERRAMENTAS,True,new,"<p><strong>Monitorização e Observabilidadev
 <p>Sem Informação>Biblioteca de Logging</p>","Monitorização
 Observabilidade",new
-dbt,HOLD,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+dbt,ESPERAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p><strong><a href=""https://www.getdbt.com/"">dbt</p>",Utilização geral,new
-duckdb,HOLD,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+duckdb,ESPERAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p><strong><a href=""https://duckdb.org/"">duckdb</p>",Utilização geral,new
-Elasticsearch,ASSESS,FERRAMENTAS,True,new,"<p><strong>Interface de utilização & Descoberta</strong></p>
+Elasticsearch,AVALIAR,FERRAMENTAS,True,new,"<p><strong>Interface de utilização & Descoberta</strong></p>
 <p>Engine distribuido de pesquisa e análise, frequentemente utilizado para agregação de logs, aplicações baseadas em mecanismos de pesquisa ou dashboards analíticos, relevante em contextos de observabilidade e pesquisa de dados semiestruturados.</p>
 <p>Suporta cenários de: </p>
 <p>1. Pesquisa de texto completo</p>
@@ -113,7 +113,7 @@ Elasticsearch,ASSESS,FERRAMENTAS,True,new,"<p><strong>Interface de utilização 
 <p>1. Azure Monitor + Log Analytics (nativo)</p>
 <p>2. Datadog, Splunk, etc.</p>","Pesquisa
 Descoberta",new
-Fabric Capacities Metric APP,ADOPT,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+Fabric Capacities Metric APP,ADOTAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p>Utilitário de monitorização baseado em Power BI para analisar o uso da capacidade do Fabric, a distribuição das carga de trabalho e as métricas de desempenho</p>
 <p>útil para cenários de governação, orçamentação e supervisão operacional.</p>
 <p>1. Fornecido como um aplicativo do Power BI. </p>
@@ -128,7 +128,7 @@ Fabric Capacities Metric APP,ADOPT,FERRAMENTAS,True,new,"<p><strong>Ferramenta d
 <p>2. Proprietários de plataforma</p>
 <p>3. Equipas de com foco nos custos de utilização da plataforma para operacionalização de produtos de dados .</p>","Monitorização
 Observabilidade",new
-Fabric Data Factory,ADOPT,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+Fabric Data Factory,ADOTAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p>O Fabric Data Factory é a evolução do Azure Data Factory (ADF) da Microsoft para o ecossistema do Microsoft Fabric, oferecendo uma plataforma de orquestração mais unificada e nativa para pipelines de dados. </p>
 <p>Sendo uma ferramenta de orquestração nativa no Microsoft Fabric, e alinhada com os padrões clássicos do Data Factory, integrando agora com a filosofia do Lakehouse, warehouse e governação de itens do Fabric, tona-se importante posicioná-lo cuidadosamente ao lado do Dataflows Gen2 e outras ferramentas de orquestração.</p>
 <p>Capaciddes disponibilizadas: </p>
@@ -138,34 +138,34 @@ Fabric Data Factory,ADOPT,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utiliza
 <p>4. Inclui triggers de eventos, execuções baseadas em agendamentos, suoprte a ""managed identities"" e integração com workspaces.</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/data-factory/data-factory-overview"">Fabric Data Factory</p>","Automação
 Orquestração",new
-Fabric Search Web Interface,ADOPT,FERRAMENTAS,True,new,"<p><strong>Interface de utilização & Descoberta</strong></p>
+Fabric Search Web Interface,ADOTAR,FERRAMENTAS,True,new,"<p><strong>Interface de utilização & Descoberta</strong></p>
 <p>Capacidades de pesquisa e descoberta centralizada de artefatos do Microsoft Fabric</p>
 <p>Oferece suporte a pesquisas baseadas em nomes e metadados em workspaces, permitindo cenários de descoberta e governação em ambientes colaborativos e distribuidos </p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/fundamentals/fabric-home"">Fabric Items Web Inferface Search</p>","Pesquisa
 Descoberta",new
-Git,ADOPT,FERRAMENTAS,False,no change,"<p><strong>DevOps e Engenharia</strong></p>
+Git,ADOTAR,FERRAMENTAS,False,no change,"<p><strong>DevOps e Engenharia</strong></p>
 <p>Essencial para a estratégia de CI/CD e controle de versões. </p>
 <p>Possibilitam a adoção de técnicas formais no contexto da automação de entregas, governação e colaboração de equipas. </p>
 <p>Fundação para a adoção de técnicas de controle de versões, utilizadas para rastreio de código-fonte, notebooks, scripts e configurações, entre diferentes equipas de trabalho e ambientes.</p>
 <p><strong><a href=""https://git-scm.com/"">Git</p>","DevOps
 Engenharia",none
-GitHub Actions,TRIAL,FERRAMENTAS,True,new,"<p><strong>DevOps e Engenharia</strong></p>
+GitHub Actions,TESTAR,FERRAMENTAS,True,new,"<p><strong>DevOps e Engenharia</strong></p>
 <p>Essencial para a estratégia de CI/CD e controle de versões. </p>
 <p>Possibilitam a adoção de técnicas formais no contexto da automação de entregas, governação e colaboração de equipas. </p>
 <p>Fundação para a adoção de técnicas de controle de versões, utilizadas para rastreio de código-fonte, notebooks, scripts e configurações, entre diferentes equipas de trabalho e ambientes.</p>
 <p><strong><a href=""https://github.com/features/actions"">GitHub Actions</p>","DevOps
 Engenharia",new
-GitHub Repos,ADOPT,FERRAMENTAS,True,new,"<p><strong>DevOps e Engenharia</strong></p>
+GitHub Repos,ADOTAR,FERRAMENTAS,True,new,"<p><strong>DevOps e Engenharia</strong></p>
 <p>Essencial para a estratégia de CI/CD e controle de versões. </p>
 <p>Possibilitam a adoção de técnicas formais no contexto da automação de entregas, governação e colaboração de equipas. </p>
 <p>Plataforma de repositório de código central com suporte para controle de versõe, colaboração e integração de implementação para notebooks, pipelines, modelos e configurações</p>
 <p><strong><a href=""https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories"">GitHub Repos</p>","DevOps
 Engenharia",new
-Maestro,ADOPT,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+Maestro,ADOTAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p>Sem Informação>Maestro</p>
 <p>dsi-de-docs/maestro.md at main · BdP/dsi-de-docs</p>","Automação
 Orquestração",new
-Microsoft Entra ID,ADOPT,FERRAMENTAS,False,no change,"<p><strong>Gestão de Identidades</strong></p>
+Microsoft Entra ID,ADOTAR,FERRAMENTAS,False,no change,"<p><strong>Gestão de Identidades</strong></p>
 <p>Ferramentas e Serviços para construção de uma Plataforma de gestão de identidades para autenticação de utilizadores, serviços e APIs </p>
 <p>Permite o controlo de acessos baseado em funções, acessos condicionais, SSO e integração em todo o ecossistema do Azure e serviços de dados.</p>
 <p>Disponibiliza as seguintes capacidades: </p>
@@ -181,13 +181,13 @@ Microsoft Entra ID,ADOPT,FERRAMENTAS,False,no change,"<p><strong>Gestão de Iden
 <p>4. DevOps e GitHub</p>
 <p><strong><a href=""https://www.microsoft.com/pt-pt/security/business/identity-access/microsoft-entra-id"">Microsoft Entra ID</p>","Gestão de Identidades
 Controlo de Acessos",none
-Módulo CQN 1,HOLD,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+Módulo CQN 1,ESPERAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p><strong><a href=""https://www.getdbt.com/"">dbt</p>
 <p>Sem Informação>Módulo CQN 1</p>",Utilização geral,new
-Módulo CQN 2,HOLD,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
+Módulo CQN 2,ESPERAR,FERRAMENTAS,True,new,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p><strong><a href=""https://www.getdbt.com/"">dbt</p>
 <p>Sem Informação>Módulo CQN 2</p>",Utilização geral,new
-OneLake File Explorer,TRIAL,FERRAMENTAS,True,new,"<p><strong>Interface de utilização & Descoberta</strong></p>
+OneLake File Explorer,TESTAR,FERRAMENTAS,True,new,"<p><strong>Interface de utilização & Descoberta</strong></p>
 <p>Extensão nativa do Windows que permite o acesso ao sistema de arquivos do OneLake por meio de integração semelhante ao OneDrive</p>
 <p>Suporta operações de leitura/gravação em dados do Lakehouse a partir de ambientes de desktop locais com as permissões apropriadas.</p>
 <p>Permite visualização nativa do OneLake a partir do Windows File Explorer com autenticação via Microsoft Entra ID.</p>
@@ -197,7 +197,7 @@ OneLake File Explorer,TRIAL,FERRAMENTAS,True,new,"<p><strong>Interface de utiliz
 <p>3. Exploração de estruturas de pastas de espaços de trabalho.</p>
 <p><strong><a href=""https://www.microsoft.com/en-us/download/details.aspx?id=105222"">OneLake File Explorer</p>","Pesquisa
 Descoberta",new
-On-premises Data Gateway,ADOPT,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
+On-premises Data Gateway,ADOTAR,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
 <p>Gateway de Dados Local para desempenhar um papel especializado, porém importante, em plataformas de dados híbridas, permitindo conectividade segura de serviços em Cloud a fontes de dados locais. </p>
 <p>É essencial onde sistemas legados, requisitos regulatórios ou restrições de rede exigem cenários de integração híbridos.</p>
 <p>Permite conectividade híbrida segura do Microsoft Fabric, Power BI e outros serviços do Azure a fontes de dados locais </p>
@@ -211,24 +211,24 @@ On-premises Data Gateway,ADOPT,FERRAMENTAS,True,new,"<p><strong>Segurança e Ope
 <p>2. Reforça a segurança, autenticação e controle do fluxo de dados.</p>
 <p><strong><a href=""VNET Data Gateway"">VNET Data Gateway</p>","Segurança
 Operações",new
-Pacman,ADOPT,FERRAMENTAS,False,no change,"<p><strong>Ferramenta de utilização geral</strong></p>
+Pacman,ADOTAR,FERRAMENTAS,False,no change,"<p><strong>Ferramenta de utilização geral</strong></p>
 <p>Frameworks de Arquitetura de Dados - Recolha, Controlo Qualidade e Processamento</p>","Automação
 Orquestração",none
-Azure Vaults for Backup and DR ,HOLD,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
+Azure Vaults for Backup and DR ,ESPERAR,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
 <p>Termo consolidado para segurança de Serviços de Recuperação e de Backup</p>
 <p>É uma ferramenta de segurança e proteção, gerida, usada para: </p>
 <p>1. Backup de VMs, SQL, Arquivos do Azure, etc.</p>
 <p>2. Recuperação em caso de desastre via Azure Site Recovery</p>
 <p>Normalmente periférica em arquiteturas nativas de dados, pode sobrepor-se a funcionalidades especificas de serviços de backup </p>","Segurança
 Operações",new
-VNET Data Gateway,TRIAL,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
+VNET Data Gateway,TESTAR,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/power-bi/connect-data/service-gateway-onprem"">On-premises Data Gateway</p>","Segurança
 Operações",new
-Databricks Unity Catalog,HOLD,FERRAMENTAS,False,moved in,"<p><strong>Governação</strong></p>
+Databricks Unity Catalog,ESPERAR,FERRAMENTAS,False,moved in,"<p><strong>Governação</strong></p>
 <p>Ferramemta estratégica de governação estratégica, cada vez mais crítica, mas ainda em fase de adoção</p>
 <p>1. É uma ferramenta de governação e gestão de metadados.</p>
 <p>2. Fornece recursos específicos: controle de acessos, catalogação de dados, linhagem e auditoria</p>",Governação,up
-Azure Key Vault,ADOPT,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
+Azure Key Vault,ADOTAR,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações</strong></p>
 <p>O Azure Key Vault é uma ferramenta de gestão de segredos e armazenamento de chaves.</p>
 <p>É usado para proteger credenciais, strings de conexão, chaves de criptografia, certificados e muito mais.</p>
 <p>Integra com:</p>
@@ -238,16 +238,16 @@ Azure Key Vault,ADOPT,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações<
 <p>4. Pipelines de CI/CD</p>
 <p><strong><a href=""https://azure.microsoft.com/en-us/products/key-vault"">Azure Key Vault</p>","Segurança
 Operações",new
-Azure AI Services,HOLD,PLATAFORMAS,True,new,"<p><strong>Inteligência Artificial & Machine Learning</strong></p>
+Azure AI Services,ESPERAR,PLATAFORMAS,True,new,"<p><strong>Inteligência Artificial & Machine Learning</strong></p>
 <p><strong><a href=""https://azure.microsoft.com/en-us/products/ai-services"">Azure AI services</p>","Inteligência Artificial
 Machine Learning",new
-Azure API Management,HOLD,PLATAFORMAS,True,new,"<p><strong>Integração & Conectividade</strong></p>
+Azure API Management,ESPERAR,PLATAFORMAS,True,new,"<p><strong>Integração & Conectividade</strong></p>
 <p>Plataforma estratégica para exposição segura de APIs e governação de integraçoes </p>
 <p><strong><a href=""https://azure.microsoft.com/en-us/products/api-management"">Azure API Management</p>","Integração
 Conectividade",new
-Azure App Service,HOLD,PLATAFORMAS,True,new,"<p><strong>Plataforma de utilização geral</strong></p>
+Azure App Service,ESPERAR,PLATAFORMAS,True,new,"<p><strong>Plataforma de utilização geral</strong></p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/app-service/overview"">Azure APP Service</p>",Utilização geral,new
-Azure Data Factory,HOLD,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
+Azure Data Factory,ESPERAR,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
 <p>Plataforma de integração de dados legada e híbrida;, relevante para cargas de trabalho existentes, mas sendo progressivamente substituída pela orquestração nativa do Fabric em plataformas de dados modernas.</p>
 <p>Faz sentido incluir o ADF, mas marcá-lo como ""Hold"" para refletir que é relevante, mas não é mais a direção estratégica.</p>
 <p>Considerado em cenários de :</p>
@@ -256,7 +256,7 @@ Azure Data Factory,HOLD,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</stro
 <p>3. Movimentação de dados entre regiões ou multi-cloud</p>
 <p>4. Enquanto o Fabric ainda não for coniderado ainda a plataforma universal</p>","Dados
 Analitica",new
-Azure DataLake Storage Gen 2,ASSESS,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
+Azure DataLake Storage Gen 2,AVALIAR,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
 <p>O Azure Data Lake Storage Gen2 (ADLS Gen2) é uma plataforma central de armazenamento nativos da Cloud Azure e suporta quase todos os principais serviços da sua plataforma de dados (Fabric, Synapse, Data Factory, etc.).</p>
 <p>Suporta arquiteturas lakehouse, namespaces hierárquicos, RBAC, ACLs e integra com todos os principais serviços de análise do Azure.</p>
 <p>Capacidades</p>
@@ -269,7 +269,7 @@ Azure DataLake Storage Gen 2,ASSESS,PLATAFORMAS,True,new,"<p><strong>Armazenamen
 <p>4. Azure ML</p>
 <p>Permite controle de acesso via Azure RBAC + ACLs</p>
 <p><strong><a href=""https://learn.microsoft.com/pt-pt/azure/hdinsight/overview-data-lake-storage-gen2"">Azure DataLake Storage Gen 2</p>",Persistência,new
-Azure Private Link (with Private Endpoint),TRIAL,PLATAFORMAS,True,new,"<p><strong>Segurança e Operações</strong></p>
+Azure Private Link (with Private Endpoint),TESTAR,PLATAFORMAS,True,new,"<p><strong>Segurança e Operações</strong></p>
 <p>O Azure Private Link é um serviço essencial para segurança de rede e isolamento de acesso a dados. </p>
 <p>Permite conectividade privada aos serviços do Azure sem expor o tráfego à internet pública, o que é especialmente importante em plataformas de dados que lidam com dados confidenciais ou regulados.</p>
 <p>Fundamental para acesso seguro e privado aos serviços de PaaS do Azure e serviços de parceiros, por meio de endpoints isolados da rede; impõe isolamento e conformidade de rede em arquiteturas de dados de nível empresarial.</p>
@@ -280,10 +280,10 @@ Azure Private Link (with Private Endpoint),TRIAL,PLATAFORMAS,True,new,"<p><stron
 <p>4. Frequentemente combinado com Zonas DNS Privadas, Integração de VNet.</p>
 <p><strong><a href=""https://azure.microsoft.com/pt-pt/products/private-link"">Azure Private Link</p>","Segurança
 Operações",new
-Azure SQL database,ASSESS,PLATAFORMAS,True,new,"<p><strong>Gestão de Bases de Dados</strong></p>
+Azure SQL database,AVALIAR,PLATAFORMAS,True,new,"<p><strong>Gestão de Bases de Dados</strong></p>
 <p>Azure SQL Database</p>
 <p><strong><a href=""""https://azure.microsoft.com/en-us/products/azure-sql/database/?&ef_id=_k_Cj0KCQjw8cHABhC-ARIsAJnY12yuaGXxeolRa74kydunvO6AqfECw_APA2rIx382WXsF-vk1FsMJNRkaAt84EALw_wcB_k_&OCID=AIDcmmj8drqamm_SEM__k_Cj0KCQjw8cHABhC-ARIsAJnY12yuaGXxeolRa74kydunvO6AqfECw_APA2rIx382WXsF-vk1FsMJNRkaAt84EALw_wcB_k_&gad_source=1&gclid=Cj0KCQjw8cHABhC-ARIsAJnY12yuaGXxeolRa74kydunvO6AqfECw_APA2rIx382WXsF-vk1FsMJNRkaAt84EALw_wcB"""">",Persistência,new
-Azure Storage account,ADOPT,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
+Azure Storage account,ADOTAR,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
 <p>Camada de armazenamento fundamental epara plataformas de dados nativas em Cloud; compatível com ADLS Gen2, Blob e padrões de data lake </p>
 <p>É um serviço central da plataforma Azure que permite:</p>
 <p>1. Armazenamento de objetos (Blob)</p>
@@ -295,7 +295,7 @@ Azure Storage account,ADOPT,PLATAFORMAS,True,new,"<p><strong>Armazenamento</stro
 <p>3. Fluxos de trabalho de Machine Learning</p>
 <p>4. Backup, recuperação e logging</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview"">Azure Storage accont</p>",Persistência,new
-Dataflows Gen2,TRIAL,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
+Dataflows Gen2,TESTAR,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
 <p>O Dataflows Gen2 é um plataforma low-code de transformação de dados e desempenha um papel cada vez mais central no Microsoft Fabric. </p>
 <p>Ele é usado para ingestão, modelação e preparação de dados </p>
 <p>Principais capacidades</p>
@@ -305,16 +305,16 @@ Dataflows Gen2,TRIAL,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong>
 <p>4. Possui integração de linhagem, controle de acessos e utilização de workspaces no Fabric.</p>
 <p><strong><a href=""https://learn.microsoft.com/pt-pt/fabric/data-factory/dataflows-gen2-overview"">Dataflows (Gen2)</p>","Dados
 Analitica",new
-DDEW,ADOPT,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
+DDEW,ADOTAR,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
 <p>Data Warehouse do DDE</p>",Persistência,none
-Event Hubs,HOLD,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
+Event Hubs,ESPERAR,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
 <p>O Event Hubs é uma plataforma de streaming totalmente gerida.</p>
 <p>Plataforma de ingestão essencial para streaming de dados em escala, essencial para análises em tempo real, telemetria e pipelines de eventos híbridos.</p>
 <p>1. Permite a ingestão de altas taxas de transferência de telemetria, logs, fluxos de eventos, dados de IoT.</p>
 <p>2. Faz parte da infraestrutura central de streaming de eventos do Azure .</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/event-hubs/"">Azure Event Hubs</p>","Dados
 Analitica",new
-Fabric Notebooks,ADOPT,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
+Fabric Notebooks,ADOTAR,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</strong></p>
 <p>Interface de notebooks nativa no Microsoft Fabric para criação de scripts PySpark, Spark SQL ou visuais; integrada com Lakehouse, Pipelines e workspaces.</p>
 <p>Construída com base nos padrões Jupyter, mas:</p>
 <p>1. Hospedada nativamente no Fabric.</p>
@@ -325,17 +325,17 @@ Fabric Notebooks,ADOPT,PLATAFORMAS,True,new,"<p><strong>Dados e Analitica</stron
 <p>2. Governados por meio de permissões de workspace, linhagem e orquestração.</p>
 <p><strong><a href=""https://learn.microsoft.com/pt-br/fabric/data-engineering/how-to-use-notebook"">Fabric Notebooks</p>","Dados
 Analitica",new
-File transfer,TRIAL,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
+File transfer,TESTAR,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
 <p>Sistema de transferência de ficheiros entre o Banco de Portugal e instituições</p>","Integração
 Conectividade",none
-Jams,TRIAL,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
+Jams,TESTAR,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
 <p><strong><a href=""https://www.jamsscheduler.com/"">Jams Scheduler</p>","Automação
 Orquestração", 
-Kubernetes with Azure Arc,HOLD,PLATAFORMAS,True,new,"<p><strong>Governação</strong></p>
+Kubernetes with Azure Arc,ESPERAR,PLATAFORMAS,True,new,"<p><strong>Governação</strong></p>
 <p>Plaforma de governação híbrida/multi-cloud para suportar workloads trabalho de dados</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/overview"">Azure Arc-enabled Kubernets</p>","DevOps
 Engenharia",new
-Microsoft OneLake,ADOPT,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
+Microsoft OneLake,ADOTAR,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
 <p>Data lake unificado do Microsoft Fabric, construído sobre o ADLS Gen2, fornece uma única camada de armazenamento lógico em todos os espaços de trabalho e funcionalidades com suporte integrado para atalhos e tabelas delta.</p>
 <p>É na prática a proposta de implementação do padrão Data Lake no Fabric.</p>
 <p>Integra:</p>
@@ -346,7 +346,7 @@ Microsoft OneLake,ADOPT,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong><
 <p>5. Atalhos</p>
 <p>6. Compatível com Parquet, Delta, CSV, JSON, etc.</p>
 <p><strong><a href=""https://learn.microsoft.com/pt-pt/fabric/onelake/onelake-overview"">OneLake</p>",Persistência,new
-Fabric OneLake Shortcuts,ADOPT,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
+Fabric OneLake Shortcuts,ADOTAR,PLATAFORMAS,True,new,"<p><strong>Armazenamento</strong></p>
 <p>No contexto do Microsoft Fabric, são um recurso estratégico que permite a relação lógica entre locais fisicos de armazenamento sem necessidade de duplicação de  dados. </p>
 <p>Particularmente importante em cenários de virtualização de dados, reutilização e colaboração entre áreas de trabalho no OneLake, fundamentais para a colaboração entre domínios e a arquitetura unificada de Lakehouse.</p>
 <p>Principais funcionalidades</p>
@@ -355,7 +355,7 @@ Fabric OneLake Shortcuts,ADOPT,PLATAFORMAS,True,new,"<p><strong>Armazenamento</s
 <p>3. Evitar cópias completas de dados, melhorando a eficiência e a governação.</p>
 <p>4. Integra com Lakehouse, Fluxos de Dados e Pipelines.</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/onelake/onelake-shortcuts"">One Lake Shortcuts</p>",Persistência,new
-Microsoft Purview,ASSESS,PLATAFORMAS,True,new,"<p><strong>Governação</strong></p>
+Microsoft Purview,AVALIAR,PLATAFORMAS,True,new,"<p><strong>Governação</strong></p>
 <p>Estratégica para plataformas baseadas no Azure, especialmente para cenários de conformidade e governação coorporativa</p>
 <p>Oferece:</p>
 <p>1. Catalogação de dados</p>
@@ -363,24 +363,24 @@ Microsoft Purview,ASSESS,PLATAFORMAS,True,new,"<p><strong>Governação</strong><
 <p>3. Classificação</p>
 <p>Integra com o Azure Data Services, o Power BI, o SQL, e o Microsoft Fabric.</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/purview/unified-catalog"">Pureview Data Catalog</p>",Governação,new
-REP,HOLD,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
+REP,ESPERAR,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
 <p>O REP é o sistema que permite ao Banco de Portugal fazer o controlo sobre as Obrigações de Reporte a que os Agentes Financeiros/ Entidades estão obrigados. Identifica para cada Entidade quais as Obrigações de Reporte que foram cumpridas e quais se encontram em incumprimento desde sempre ou num determinado período.</p>
 Identifica para cada Entidade quais as Obrigações de Reporte que foram cumpridas e quais se encontram em incumprimento desde sempre ou num determinado período.</p>",Utilização geral,none
-RPI,ASSESS,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
+RPI,AVALIAR,PLATAFORMAS,False,no change,"<p><strong>Plataforma de utilização geral</strong></p>
 <p>O Repositório de Partilha Interna (RPI) , é um repositório centralizado de dados para partilha interna no DDE. O principal objetivo do RPI é tornar os processos de incorporação e partilha de informação mais eficientes, harmonizados e robustos.</p>",Persistência,none
-Spark Jobs,ADOPT,PLATAFORMAS,True,new,"<p><strong>Computação</strong></p>
+Spark Jobs,ADOTAR,PLATAFORMAS,True,new,"<p><strong>Computação</strong></p>
 <p>Plataforma de execução para computação e processamento distribuído usando Apache Spark; essencial para ETL, processamentos batch, streaming e Machine Learning .</p>
 <p>Podem ser habilitados por outras Plataformas  (Fabric, Synapse, Databricks).</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/data-engineering/spark-job-definition"">Spark Jobs</p> </p>",Computação,new
-SQL End Points,ADOPT,PLATAFORMAS,True,new,"<p><strong>Utilização geral</strong></p>
+SQL End Points,ADOTAR,PLATAFORMAS,True,new,"<p><strong>Utilização geral</strong></p>
 <p>Camada de interface no Fabric para exposição de dados (de lakehouse, warehouse ou outros ) como pontos de acesso SQL, acessiveis por ferramentas de BI, relatórios e cenários de integração em análises</p>
 <p><strong><a href=""https://learn.microsoft.com/en-us/sql/relational-databases/server-management-objects-smo/tasks/implementing-endpoints?view=sql-server-ver16"">SQL End Points</p>","Dados
 Analitica",new
-Azure Monitor,ASSESS,PLATAFORMAS,True,new,"<p><strong>Monitorização e Observabilidade</strong></p>
+Azure Monitor,AVALIAR,PLATAFORMAS,True,new,"<p><strong>Monitorização e Observabilidade</strong></p>
 <p>Funcionalidades de monitorização e observabilidade geridos (por exemplo, Azure Monitor, AWS CloudWatch, Google Cloud Operations Suite) </p>
 <p><strong><a href=""https://azure.microsoft.com/en-us/products/monitor/?ef_id=_k_Cj0KCQjww-HABhCGARIsALLO6XxSqEexyrUawSv2uyCJkJ7okojO5jK7HWGU9fz947lC0mlMVoEPHjoaAmlkEALw_wcB_k_&OCID=AIDcmmj8drqamm_SEM__k_Cj0KCQjww-HABhCGARIsALLO6XxSqEexyrUawSv2uyCJkJ7okojO5jK7HWGU9fz947lC0mlMVoEPHjoaAmlkEALw_wcB_k_&gad_source=1&gclid=Cj0KCQjww-HABhCGARIsALLO6XxSqEexyrUawSv2uyCJkJ7okojO5jK7HWGU9fz947lC0mlMVoEPHjoaAmlkEALw_wcB"">Azure Log Analytics</p>","Monitorização
 Observabilidade",new
-Policy-Driven Data Protection and Compliance Enforcement for Data Products,ASSESS,TÉCNICAS,True,new,"<p><strong>Segurança e Conformidade</strong></p>
+Policy-Driven Data Protection and Compliance Enforcement for Data Products,AVALIAR,TÉCNICAS,True,new,"<p><strong>Segurança e Conformidade</strong></p>
 <p>Security governance mechanism to detect and restrict sharing or movement of sensitive data within Fabric artifacts (e.g., lakehouses, datasets, reports); integrates with Microsoft Purview DLP engine and compliance center
 Establishes the use of sensitivity labels, automated classification, and data loss prevention policies to enforce compliance and access controls across datasets, reports, lakehouses, and semantic models. Enables federated governance with centralized guardrails, export blocking, and audit workflows. Supports policy inheritance, integration with cataloging tools (e.g., Purview), and aligns with secure data product delivery strategies.
 Reinforced by:
@@ -394,12 +394,12 @@ Reinforced by:
 8. Fabric Semantic Models, Reports, Datasets</p>
 <p><strong><a href=""https://www.microsoft.com/en-us/security/business/security-101/what-is-data-loss-prevention-dlp"">Data Loss Prevention Policies</p>","Segurança
 Conformidade",new
-Data Lifecycle Management,TRIAL,TÉCNICAS,True,new,"Fabric Lifecycle Management is an important emerging topic that goes beyond individual tools and speaks to governance, promotion, versioning, and automation across workspaces, pipelines, notebooks, models, and datasets in Microsoft Fabric.
+Data Lifecycle Management,TESTAR,TÉCNICAS,True,new,"Fabric Lifecycle Management is an important emerging topic that goes beyond individual tools and speaks to governance, promotion, versioning, and automation across workspaces, pipelines, notebooks, models, and datasets in Microsoft Fabric.
 This is clearly a technique that should be added to your Radar, and it will tie together several tools and practices you've already mapped.
 Governance and automation pattern for promoting, versioning, validating, and monitoring Fabric assets (notebooks, pipelines, dataflows, semantic models, etc.) across environments such as Dev, Test, and Prod
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/cicd/"">Fabric Lifecycle management</p>","Dados
 Governação",new
-CI/CD,ADOPT,TÉCNICAS,False,new,"Formalizes automated build, validation, and deployment processes for versioned pipelines, notebooks, semantic models, and related data platform assets. Supports environment promotion workflows (Dev/Test/Prod), test harnesses, rollback strategies, and environment-as-code patterns to ensure consistency, traceability, and governance across delivery teams. Reinforced by Git-based workflows and integration with orchestration and access governance layers.
+CI/CD,ADOTAR,TÉCNICAS,False,new,"Formalizes automated build, validation, and deployment processes for versioned pipelines, notebooks, semantic models, and related data platform assets. Supports environment promotion workflows (Dev/Test/Prod), test harnesses, rollback strategies, and environment-as-code patterns to ensure consistency, traceability, and governance across delivery teams. Reinforced by Git-based workflows and integration with orchestration and access governance layers.
 Automation pattern for versioning, validating, and deploying data pipelines, notebooks, models, and configurations across environments using Git-based workflows and deployment pipelines
 Covers:
 1. Version control for:
@@ -429,7 +429,7 @@ Reinforced by:
 7. Semantic Models, Pipelines, Lakehouses, Datasets
 <p>CI/CD (Continuous Integration/Continuous Delivery ou Deployment) é uma prática de desenvolvimento de software que automatiza o processo de integração de código, testes e implantação, visando acelerar e melhorar a qualidade das entregas. O CI (Integração Contínua) foca na integração regular de alterações no código, enquanto o CD (Entrega ou Implantação Contínua) automatiza a entrega dessas alterações para os ambientes de produção.</p>","Engenharia
 Automação",up
-fine-grained access Control,ASSESS,TÉCNICAS,True,new,"Practice of assigning fine-grained access to specific items (datasets, reports, notebooks, pipelines); complements workspace-level roles with targeted control over sensitive or shared resources
+fine-grained access Control,AVALIAR,TÉCNICAS,True,new,"Practice of assigning fine-grained access to specific items (datasets, reports, notebooks, pipelines); complements workspace-level roles with targeted control over sensitive or shared resources
 Applies to:
 1. Power BI and Fabric items (e.g., reports, datasets, lakehouses, notebooks)
 2. Synapse artifacts (pipelines, notebooks)
@@ -438,14 +438,14 @@ Allows granular control beyond what workspace roles alone offer
 Often tied to AAD groups, managed identities, or user-level access
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/security/permission-model"">Azure Item Permissions</p>","Governação
 Controlo de Acessos",new
-DataLake Schema,ADOPT,TÉCNICAS,True,new,"Flexible, schema-on-read or late-binding approach using open formats (e.g., Parquet, Delta); aligns with data lakehouse architecture; favors agility and scale over rigid structure
+DataLake Schema,ADOTAR,TÉCNICAS,True,new,"Flexible, schema-on-read or late-binding approach using open formats (e.g., Parquet, Delta); aligns with data lakehouse architecture; favors agility and scale over rigid structure
 Emphasizes:
 1. Schema evolution
 2. Partitioning, columnar storage
 3. Open formats over cloud storage (e.g., ADLS)
 Common in ADLS Gen2 + Delta Lake, Synapse Lake Database, Fabric Lakehouse
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-schemas"">Lakehouse Schema</p>",Persistência,new
-Data Lineage,TRIAL,TÉCNICAS,True,new,"Practice of visually or programmatically tracking data dependencies across items (e.g., pipelines, notebooks, datasets, semantic models); enables impact analysis, governance, and trust in Microsoft Fabric and modern data platforms
+Data Lineage,TESTAR,TÉCNICAS,True,new,"Practice of visually or programmatically tracking data dependencies across items (e.g., pipelines, notebooks, datasets, semantic models); enables impact analysis, governance, and trust in Microsoft Fabric and modern data platforms
 Captures relationships across:
 1. Dataflows
 2. Pipelines
@@ -460,7 +460,7 @@ Useful for:
 <p><strong><a href=""https://docs.open-metadata.org/latest/how-to-guides/data-lineage/explore"">Lineage View</p>","Metadata
 Catalogação
 Lineage",new
-Semantic Model of Data,ADOPT,TÉCNICAS,True,new,"Practice of building governed, reusable data abstractions that expose business metrics and logic over raw or curated data; foundational for Power BI, Microsoft Fabric, and self-service enablement
+Semantic Model of Data,ADOTAR,TÉCNICAS,True,new,"Practice of building governed, reusable data abstractions that expose business metrics and logic over raw or curated data; foundational for Power BI, Microsoft Fabric, and self-service enablement
 Built using:
 1. Power BI datasets
 2. Fabric semantic models
@@ -492,10 +492,10 @@ This positions semantic models at the core of:
 4. Report reuse and automation
 <p><strong><a href=""https://en.wikipedia.org/wiki/Semantic_data_model"">Semantic Models</p>","Dados
 Modelação",new
-Data Classification,ADOPT,TÉCNICAS,True,new,"Classification mechanism that applies persistent tags to data artifacts (e.g., datasets, reports, notebooks); enables downstream enforcement of DLP policies, access restrictions, and compliance tracking across Microsoft Fabric and Power BI
+Data Classification,ADOTAR,TÉCNICAS,True,new,"Classification mechanism that applies persistent tags to data artifacts (e.g., datasets, reports, notebooks); enables downstream enforcement of DLP policies, access restrictions, and compliance tracking across Microsoft Fabric and Power BI
 <p><strong><a href=""https://learn.microsoft.com/en-us/purview/sensitivity-labels"">Sensitivity Labels</p>","Dados
 Governação",new
-Coarse Grained Access Control,ADOPT,TÉCNICAS,True,new,"Workspace Roles are a critical concept for access control, collaboration, and data security, especially in services like Synapse, Microsoft Fabric, Power BI, Databricks, and Azure ML. While not a service or tool, it's an architectural access model that applies to:
+Coarse Grained Access Control,ADOTAR,TÉCNICAS,True,new,"Workspace Roles are a critical concept for access control, collaboration, and data security, especially in services like Synapse, Microsoft Fabric, Power BI, Databricks, and Azure ML. While not a service or tool, it's an architectural access model that applies to:
 1. Microsoft Fabric workspaces
 2. Azure Synapse workspaces
 3. Power BI workspaces
@@ -505,51 +505,51 @@ Roles typically define:
 2. Dataset refresh permissions, pipeline runs, model deployments
 <p><strong><a href=""https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces"">Microsoft Fabric Workspace Roles</p>","Governação
 Controlo de Acessos",new
-Observability 2.0,ASSESS,TÉCNICAS,True,new,"<p><strong>Observability is a Technique — it represents an architectural and operational practice for understanding system behavior, especially in distributed or cloud-native environments. We can infer multiple blips across quadrants based on how organizations implement Observability:
+Observability 2.0,AVALIAR,TÉCNICAS,True,new,"<p><strong>Observability is a Technique — it represents an architectural and operational practice for understanding system behavior, especially in distributed or cloud-native environments. We can infer multiple blips across quadrants based on how organizations implement Observability:
 </p>
 <p><strong><a href=""https://www.youtube.com/watch?v=IVpQeMDWysA"">Observability 2.0</a></strong> represents a shift from traditional, disparate monitoring tools to a unified approach that leverages structured, high-cardinality event data in a single data store. This model captures rich, raw events with detailed metadata to provide a single source of truth for comprehensive analysis. By storing events in their raw form, it simplifies correlation and supports real-time and forensic analysis and enables deeper insights into complex, distributed systems. This approach allows for high-resolution monitoring and dynamic investigation capabilities. Observability 2.0 prioritizes capturing high-cardinality and high-dimensional data, allowing detailed examination without performance bottlenecks. The unified data store reduces complexity, offering a coherent view of system behavior, and aligning observability practices more closely with the software development lifecycle.</p>","Monitorização
 Observabilidade",new
-Database As a Service (DBaaS),TRIAL,TÉCNICAS,True,new,"The practice of deploying RDBMS engines using managed services to reduce operational overhead while aligning with cloud ops models.
+Database As a Service (DBaaS),TESTAR,TÉCNICAS,True,new,"The practice of deploying RDBMS engines using managed services to reduce operational overhead while aligning with cloud ops models.
 Shifts ops responsibility to the platform; encourages standardization on managed offerings.
 The technique is valid and widely used, but some older platform implementations (like MariaDB Single Server) no longer align with the modern expression of that technique.",Persistência,new
-Zone-Redundant High Availability,ADOPT,TÉCNICAS,True,new,"Configuring managed database services for high availability across availability zones for resilience.
+Zone-Redundant High Availability,ADOTAR,TÉCNICAS,True,new,"Configuring managed database services for high availability across availability zones for resilience.
 Improves reliability posture; critical for production workloads.","Operações
 Governação",new
-Centralized Data Governance,ASSESS,TÉCNICAS,True,new,"Shared policy enforcement and role propagation
+Centralized Data Governance,AVALIAR,TÉCNICAS,True,new,"Shared policy enforcement and role propagation
 Applies when unifying access controls, metadata, and lineage across lakehouse environments
 Practice of enforcing consistent governance policies (e.g., access, sensitivity, sharing) across all Microsoft Fabric workspaces through standardized role definitions, inheritance rules, and sensitivity label propagation. Realized via Governance Default Policies such as workspace templates, default role scopes, and shared governance controls.","Dados
 Governação",new
-Metadata-Driven Discovery and Navigation,ASSESS,TÉCNICAS,True,new,"Design principles around findability
+Metadata-Driven Discovery and Navigation,AVALIAR,TÉCNICAS,True,new,"Design principles around findability
 Promotes findability and responsible reuse by ensuring that all datasets, models, and reports include rich, standardized metadata (descriptions, tags, classifications). Supports federated environments where discoverability and trust depend on transparent metadata rather than central catalogs. Reinforced by Sensitivity Labels, Lineage View, and Fabric Search.","Metadata
 Catalogação
 Lineage",new
-Cross-platform Metadata Management,HOLD,TÉCNICAS,True,new,"Lineage and metadata across systems
+Cross-platform Metadata Management,ESPERAR,TÉCNICAS,True,new,"Lineage and metadata across systems
 Managing metadata that spans multiple compute engines or data products (SQL, ML, BI).
 Enables unified metadata and lineage visibility across Microsoft Fabric, Power BI, Microsoft Purview, and external systems. Realized through Lineage Aggregation Patterns that standardize how metadata and dependencies are collected, visualized, and queried across data products and systems.","Metadata
 Catalogação
 Lineage",new
-Disaster recovery,ASSESS,TÉCNICAS,True,new,"Emphasizes designing for backup, disaster recovery, and business continuity using cloud-native and service-specific mechanisms
+Disaster recovery,AVALIAR,TÉCNICAS,True,new,"Emphasizes designing for backup, disaster recovery, and business continuity using cloud-native and service-specific mechanisms
 Covers inclusion of backup and DR strategies in data platform designs.
 Can reference not just Vault, but also native backup/restore in Fabric, Synapse, or Azure SQL.
 Designs for business continuity and disaster recovery by implementing data protection strategies across lakehouses, warehouses, and pipelines. Includes snapshotting, automated backups, recovery runbooks, and service-specific retention policies. Reinforced by tools like Azure Backup Vault, Recovery Services Vault, and Infrastructure-as-Code for recovery workflows.","Governação
 Controlo de Acessos",new
-DataLake,ADOPT,TÉCNICAS,True,new,"Uses cloud object storage and open formats to support layered lakehouse design; enabled by ADLS Gen2 in Azure
+DataLake,ADOTAR,TÉCNICAS,True,new,"Uses cloud object storage and open formats to support layered lakehouse design; enabled by ADLS Gen2 in Azure
 Core to modern cloud-native data lakes; supports hierarchical namespaces, ACLs, and delta formats
 Use of hierarchical namespaces, RBAC, ACLs, and delta format over blob storage for open lakehouse patterns",Persistência,new
-DataLake Zoning,TRIAL,TÉCNICAS,True,new,"Establishes a standardized organizational structure within lakehouses using logical zones (e.g., Bronze, Silver, Gold) or hierarchical layers (Raw, Cleansed, Curated). Enables separation of ingestion, transformation, and consumption stages to support traceability, governed reuse, and scalable modeling. Aligns with Medallion Architecture principles and complements open storage foundations in OneLake or ADLS Gen2.","Persistência
+DataLake Zoning,TESTAR,TÉCNICAS,True,new,"Establishes a standardized organizational structure within lakehouses using logical zones (e.g., Bronze, Silver, Gold) or hierarchical layers (Raw, Cleansed, Curated). Enables separation of ingestion, transformation, and consumption stages to support traceability, governed reuse, and scalable modeling. Aligns with Medallion Architecture principles and complements open storage foundations in OneLake or ADLS Gen2.","Persistência
 Governação",new
-Immutable Storage for Compliance and Recovery,HOLD,TÉCNICAS,True,new,"Leverages blob immutability, versioning, and legal holds; useful in regulated industries
+Immutable Storage for Compliance and Recovery,ESPERAR,TÉCNICAS,True,new,"Leverages blob immutability, versioning, and legal holds; useful in regulated industries
 Leveraging blob immutability policies and versioning for regulatory or DR purposes","Persistência
 Governação",new
-Multi-tiered Storage,HOLD,TÉCNICAS,True,new,"Pattern for optimizing cost/performance using blob tiering (hot/cool/archive)
+Multi-tiered Storage,ESPERAR,TÉCNICAS,True,new,"Pattern for optimizing cost/performance using blob tiering (hot/cool/archive)
 Tiering blobs (hot, cool, archive) for cost-performance balance","Persistência
 Governação",new
-Infrastructure-as-Code,TRIAL,TÉCNICAS,True,new,"Applies declarative automation using tools like ARM, Bicep, Terraform, or GitHub Actions to provision and manage Microsoft Fabric environments. Includes workspace creation, role assignments, capacity bindings, telemetry alerting, and backup settings. Enables consistent, version-controlled, and auditable deployment of platform configurations across development, test, and production environments.","Engenharia
+Infrastructure-as-Code,TESTAR,TÉCNICAS,True,new,"Applies declarative automation using tools like ARM, Bicep, Terraform, or GitHub Actions to provision and manage Microsoft Fabric environments. Includes workspace creation, role assignments, capacity bindings, telemetry alerting, and backup settings. Enables consistent, version-controlled, and auditable deployment of platform configurations across development, test, and production environments.","Engenharia
 Automação",new
-Secret and Credential Management,TRIAL,TÉCNICAS,True,new,"Standardizes the secure handling of secrets, credentials, and access tokens by using Azure Key Vault or equivalent services. Applies to pipelines, notebooks, APIs, and external connectors, ensuring no hardcoded credentials, auditable access, and secure integration across environments. Reinforces broader access control and DevOps automation patterns.
+Secret and Credential Management,TESTAR,TÉCNICAS,True,new,"Standardizes the secure handling of secrets, credentials, and access tokens by using Azure Key Vault or equivalent services. Applies to pipelines, notebooks, APIs, and external connectors, ensuring no hardcoded credentials, auditable access, and secure integration across environments. Reinforces broader access control and DevOps automation patterns.
 Defines a pattern for managing secrets, credentials, and tokens outside of pipelines, notebooks, or configuration files. Relies on vault-based governance mechanisms (e.g., Azure Key Vault) to securely store and inject credentials at runtime, ensuring separation of concerns, auditability, and role-based access. Enables secure CI/CD practices and environment-specific secret control.","Segurança
 Governação",new
-Event Based Monitor,TRIAL,TÉCNICAS,True,new,"Implements structured, goal-driven alerting using metric-based thresholds aligned to SLOs and error budgets. Supports traceability, feedback loops, and operational readiness by defining actionable alerts at key failure or saturation points across pipelines, Spark jobs, and compute resources. Reinforced by Azure Metric Alerts, Application Insights, and centralized telemetry.
+Event Based Monitor,TESTAR,TÉCNICAS,True,new,"Implements structured, goal-driven alerting using metric-based thresholds aligned to SLOs and error budgets. Supports traceability, feedback loops, and operational readiness by defining actionable alerts at key failure or saturation points across pipelines, Spark jobs, and compute resources. Reinforced by Azure Metric Alerts, Application Insights, and centralized telemetry.
 Reinforced by:
 1. Azure Metric Alerts
 2. Application Insights
@@ -558,7 +558,7 @@ Reinforced by:
 5. OpenTelemetry Adoption
 6. Centralized Telemetry Architecture","Monitorização
 Observabilidade",new
-Private Connectivity,HOLD,TÉCNICAS,True,new,"Implements a layered security strategy where data platform components are only accessible through explicitly defined, private, and role-governed pathways. Uses Azure Private Link, managed identities, and RBAC to enforce least-privilege access at the network and service layer, ensuring isolation from public exposure by default. Enables alignment with Zero Trust, compliance, and governance objectives.
+Private Connectivity,ESPERAR,TÉCNICAS,True,new,"Implements a layered security strategy where data platform components are only accessible through explicitly defined, private, and role-governed pathways. Uses Azure Private Link, managed identities, and RBAC to enforce least-privilege access at the network and service layer, ensuring isolation from public exposure by default. Enables alignment with Zero Trust, compliance, and governance objectives.
 1. Explicitly communicates an architectural stance — security is embedded into the design of access patterns
 2. Avoids the ambiguity of “platform architecture” by focusing on connectivity and isolation
 3. Brings together network security + identity + access control
@@ -570,7 +570,7 @@ Reinforced by:
 5. Microsoft Entra ID
 6. RBAC + Item Permissions","Segurança
 Controlo de Acessos",new
-Compute Governance,ADOPT,TÉCNICAS,True,new,"Implements cost control strategies through scoped compute permissions, execution constraints, and resource tagging. Supports budget alignment and cost accountability by limiting access to high-cost compute actions (e.g., large Spark jobs, capacity usage), enforcing execution windows, and mapping compute usage to teams, projects, or domains. Reinforced by RBAC, Fabric capacity planning, CI/CD automation, and telemetry.
+Compute Governance,ADOTAR,TÉCNICAS,True,new,"Implements cost control strategies through scoped compute permissions, execution constraints, and resource tagging. Supports budget alignment and cost accountability by limiting access to high-cost compute actions (e.g., large Spark jobs, capacity usage), enforcing execution windows, and mapping compute usage to teams, projects, or domains. Reinforced by RBAC, Fabric capacity planning, CI/CD automation, and telemetry.
 Reinforced by:
 1. Compute Permissions and Execution Control
 2. CI/CD for Pipelines
@@ -579,7 +579,7 @@ Reinforced by:
 5. Centralized Telemetry Architecture
 6. (Future) Execution Guardrails, Delegated Ops","Governação
 Controlo de Acessos",new
-Data Product Ownership,TRIAL,TÉCNICAS,True,new,"Establishes a governance model in which each data product (e.g., dataset, semantic model, API, pipeline) has an accountable owner responsible for its quality, security, and lifecycle. Ties access, visibility, and promotion rights to ownership boundaries using item-level permissions, workspace roles, and versioning conventions. Lays the foundation for federated governance and domain-aligned operations.
+Data Product Ownership,TESTAR,TÉCNICAS,True,new,"Establishes a governance model in which each data product (e.g., dataset, semantic model, API, pipeline) has an accountable owner responsible for its quality, security, and lifecycle. Ties access, visibility, and promotion rights to ownership boundaries using item-level permissions, workspace roles, and versioning conventions. Lays the foundation for federated governance and domain-aligned operations.
 Reinforced by:
 1. Item-Level Permissions for Data Platform Assets
 2. Unified Role-Based Access Governance
@@ -587,7 +587,7 @@ Reinforced by:
 4. Fit-for-Purpose Schema Design
 5. Fabric Explorer & Search (for discoverability)","Dados
 Governação",new
-Data Product Operating Model,TRIAL,TÉCNICAS,True,new,"Enables domain or team-specific responsibility for managing pipelines, compute resources, and data products within predefined governance boundaries. Supports a federated operational model where platform teams define global policies, while delivery teams manage execution, CI/CD, and artifact ownership. Reinforced by RBAC, CI/CD automation, scoped permissions, and telemetry guardrails.
+Data Product Operating Model,TESTAR,TÉCNICAS,True,new,"Enables domain or team-specific responsibility for managing pipelines, compute resources, and data products within predefined governance boundaries. Supports a federated operational model where platform teams define global policies, while delivery teams manage execution, CI/CD, and artifact ownership. Reinforced by RBAC, CI/CD automation, scoped permissions, and telemetry guardrails.
 This technique is a stepping stone toward future data mesh or domain-oriented operating models, and it’s particularly valuable in scaled organizations.
  Reinforced by:
 1. Compute Permissions and Execution Control
@@ -596,7 +596,7 @@ This technique is a stepping stone toward future data mesh or domain-oriented op
 4. CI/CD for Pipelines and Notebooks
 5. Lifecycle Management for Fabric Artifacts","Dados
 Governação",new
-Service Identity for Automation,TRIAL,TÉCNICAS,True,new,"Service Identity Management is emerging as a critical capability for secure automation, integration, and platform extensibility.
+Service Identity for Automation,TESTAR,TÉCNICAS,True,new,"Service Identity Management is emerging as a critical capability for secure automation, integration, and platform extensibility.
 Service identities are:
 1. Used everywhere in automation, data pipelines, notebook execution, integration with external systems
 2. Typically managed via:
@@ -618,7 +618,7 @@ Reinforced by:
 4. Secure-by-Design Connectivity
 5. Delegated Operations Models","Segurança
 Controlo de Acessos",new
-Business-Led Data Transformation Using Low-Code Pipelines,HOLD,TÉCNICAS,True,new,"Enables data analysts and citizen developers to build governed, reusable data transformation logic using low-code platforms like Dataflows Gen2. Reinforces access control, lineage tracking, and open-format output, while supporting collaboration with engineering teams in a fit-for-purpose pipeline strategy. Complements Spark/Fabric Pipelines for scalable workloads.
+Business-Led Data Transformation Using Low-Code Pipelines,ESPERAR,TÉCNICAS,True,new,"Enables data analysts and citizen developers to build governed, reusable data transformation logic using low-code platforms like Dataflows Gen2. Reinforces access control, lineage tracking, and open-format output, while supporting collaboration with engineering teams in a fit-for-purpose pipeline strategy. Complements Spark/Fabric Pipelines for scalable workloads.
 1. Focuses on the architectural decision to empower business users
 2. Tightly scoped to governed transformation with Dataflows Gen2
 3. Cleanly separates from Spark/Fabric Pipelines, which serve a different layer
@@ -631,8 +631,8 @@ Reinforced by:
 6. Pipeline-Native Orchestration
 7. Lineage View","Engenharia
 Automação",new
-Multi-language compute engine for data,ADOPT,TÉCNICAS,True,new,"Establishes the use of standardized distributed languages—both declarative (e.g., Spark SQL) and imperative (e.g., PySpark)—as the foundation for executing large-scale data processing workloads. Supports integration with orchestration layers, schema-driven modeling, CI/CD pipelines, and open-format storage, while maintaining flexibility for future engine portability and runtime abstraction.",Processamento,new
-Notebooks Development Experience,ADOPT,TÉCNICAS,True,new,"Define a governed, collaborative approach to notebook usage in your cloud data platform
+Multi-language compute engine for data,ADOTAR,TÉCNICAS,True,new,"Establishes the use of standardized distributed languages—both declarative (e.g., Spark SQL) and imperative (e.g., PySpark)—as the foundation for executing large-scale data processing workloads. Supports integration with orchestration layers, schema-driven modeling, CI/CD pipelines, and open-format storage, while maintaining flexibility for future engine portability and runtime abstraction.",Processamento,new
+Notebooks Development Experience,ADOTAR,TÉCNICAS,True,new,"Define a governed, collaborative approach to notebook usage in your cloud data platform
 Defines the architectural approach for managing notebooks as governed, reusable, and versioned development artifacts. Includes modular design, parameterization, approval workflows, and CI/CD integration to support reuse across teams. Applies to Fabric Notebooks, Jupyter, and cross-platform environments. Enables federated data engineering, auditability, and production readiness.
 Notebooks are not just scratchpads — they are governed, versionable, and reusable development assets that integrate into pipelines, CI/CD, and team workflows.
 This enables:
@@ -650,7 +650,7 @@ Reinforced by:
 7. Unified Role-Based Access Governance
 8. Cross-Platform Collaboration Patterns (future)","Dados
 Governação",new
-Data Connectivity Between Cloud and On-premises,ADOPT,TÉCNICAS,True,new,"Establishes a secure and policy-driven approach to hybrid data integration in transitional architectures. Enables orchestration of on-premises and cloud data sources through controlled access channels, with governance over credentials, network exposure, and execution boundaries. Supports current hybrid use cases while preparing for cloud-first adoption and future decommissioning of legacy access points.
+Data Connectivity Between Cloud and On-premises,ADOTAR,TÉCNICAS,True,new,"Establishes a secure and policy-driven approach to hybrid data integration in transitional architectures. Enables orchestration of on-premises and cloud data sources through controlled access channels, with governance over credentials, network exposure, and execution boundaries. Supports current hybrid use cases while preparing for cloud-first adoption and future decommissioning of legacy access points.
 Reinforced by:
 1. Pipeline-Native Orchestration
 2. Externalized Secret and Credential Management
@@ -659,7 +659,7 @@ Reinforced by:
 5. CI/CD for Pipelines
 6. (Hold) Azure Data Factory","Segurança
 Controlo de Acessos",new
-Open Data Storage,ADOPT,TÉCNICAS,True,new,"Establishes a structured and scalable approach to managing raw, curated, and refined data using open-format storage systems such as ADLS Gen2. Supports data zoning, storage tier optimization, access control (RBAC/ACLs), and lifecycle policies. Forms the foundation for schema governance, pipeline execution, and cross-domain data sharing. Reinforced by metadata tools, orchestration, and open table formats.
+Open Data Storage,ADOTAR,TÉCNICAS,True,new,"Establishes a structured and scalable approach to managing raw, curated, and refined data using open-format storage systems such as ADLS Gen2. Supports data zoning, storage tier optimization, access control (RBAC/ACLs), and lifecycle policies. Forms the foundation for schema governance, pipeline execution, and cross-domain data sharing. Reinforced by metadata tools, orchestration, and open table formats.
 Reinforced by:
 1. ADLS Gen2
 2. Open Storage Foundation for Lakehouse Architectures
@@ -668,7 +668,7 @@ Reinforced by:
 5. Fabric Notebooks, Pipelines, Dataflows
 6. Shortcuts, Vacuum, Lineage View
 7. Security and Cost Governance Techniques (e.g., Secure-by-Design Connectivity, Retention Policies)",Persistência,new
-Strategic Data Format,ADOPT,TÉCNICAS,True,new,"Establishes standard practices for selecting, enforcing, and managing data serialization formats such as Parquet, JSON, CSV, and XML. Aligns format choice to use cases (e.g., analytics, APIs, exports), governs schema evolution and compression strategies, and ensures consistency across ingestion, transformation, and data sharing layers. Reinforced by open storage principles, pipeline design, and schema governance.
+Strategic Data Format,ADOTAR,TÉCNICAS,True,new,"Establishes standard practices for selecting, enforcing, and managing data serialization formats such as Parquet, JSON, CSV, and XML. Aligns format choice to use cases (e.g., analytics, APIs, exports), governs schema evolution and compression strategies, and ensures consistency across ingestion, transformation, and data sharing layers. Reinforced by open storage principles, pipeline design, and schema governance.
 1. Emphasizes this is a governance pattern, not a tooling choice
 2. Covers both performance (Parquet) and interoperability (CSV, JSON)
 3. Leaves room to support Delta, AVRO, ORC, etc. in the future
@@ -681,7 +681,7 @@ Reinforced by:
 6. CI/CD for Pipelines
 7. Lineage View
 8. (Future) Delta Sharing or API Exposure Patterns",Persistência,new
-Git Ops,TRIAL,TÉCNICAS,True,new,"Establishes a version-controlled and automation-driven approach to managing data platform assets such as pipelines, notebooks, and configurations. Supports CI/CD integration, environment promotion (Dev/Test/Prod), rollback, and collaborative development using Git-native workflows. Reinforced by modular design, access governance, and federated contribution models.
+Git Ops,TESTAR,TÉCNICAS,True,new,"Establishes a version-controlled and automation-driven approach to managing data platform assets such as pipelines, notebooks, and configurations. Supports CI/CD integration, environment promotion (Dev/Test/Prod), rollback, and collaborative development using Git-native workflows. Reinforced by modular design, access governance, and federated contribution models.
 It’s a lifecycle technique that:
 1. Covers pipelines, notebooks, configurations
 2. Uses versioning, promotion, and automation
@@ -696,7 +696,7 @@ Reinforced by:
 6. Externalized Secrets
 7. (Future) Environment Promotion & IaC Patterns","Engenharia
 DevOps",new
-Query Language Support,ADOPT,TÉCNICAS,True,new,"Establishes the architectural pattern of exposing SQL endpoints as governed interfaces for accessing and consuming data products. Enables self-service query access via BI tools and federated systems, while ensuring alignment with RBAC, DLP, and data product ownership models. Supports semantic modeling, downstream traceability, and federated access controls.
+Query Language Support,ADOTAR,TÉCNICAS,True,new,"Establishes the architectural pattern of exposing SQL endpoints as governed interfaces for accessing and consuming data products. Enables self-service query access via BI tools and federated systems, while ensuring alignment with RBAC, DLP, and data product ownership models. Supports semantic modeling, downstream traceability, and federated access controls.
 This tecnhique supports:
 1. Self-service discovery and access for BI, analysts, and downstream tools
 2. Governance and RBAC/label-based controls on exposed data
@@ -711,7 +711,7 @@ Reinforced by:
 6. Lineage View
 7. Delegated Operations Models","Governação
 Controlo de Acessos",new
-Data Discovery,ADOPT,TÉCNICAS,True,new,"Establishes a governance and usability strategy that leverages the Microsoft Fabric Web Explorer and Search interfaces to enable secure, role-aware access to data platform artifacts. Supports metadata-driven discovery, lineage navigation, permission-based interaction, and federated ownership visibility. Enables scalable, self-service data product usage in multi-domain environments.
+Data Discovery,ADOTAR,TÉCNICAS,True,new,"Establishes a governance and usability strategy that leverages the Microsoft Fabric Web Explorer and Search interfaces to enable secure, role-aware access to data platform artifacts. Supports metadata-driven discovery, lineage navigation, permission-based interaction, and federated ownership visibility. Enables scalable, self-service data product usage in multi-domain environments.
 Reinforced by:
 1. Microsoft Fabric Explorer and Search (Tools)
 2. Item-Level Permissions
@@ -731,3 +731,4 @@ This technique bridges:
 3. Platform usability
 4. Search, metadata, and classification strategy","Pesquisa
 Descoberta",new
+CluedIn,ESPERAR,FERRAMENTAS,True,neu,,,

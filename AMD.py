@@ -2,7 +2,7 @@ import pandas as pd
 
 file_excel_path = r"C:\Projects\AMD_Radar\docs\AMD_Radar.xlsx"
 
-df = pd.read_excel(file_excel_path, sheet_name='AMD_Radar', header=0)
+df = pd.read_excel(file_excel_path, sheet_name='AMD_Radar_PT', header=0)
 
 # Define file path
 file_csv_path = r"C:\Projects\AMD_Radar\docs\AMD_Radar.csv"
