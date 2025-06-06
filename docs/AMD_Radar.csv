@@ -47,6 +47,10 @@ Observabilidade",new
 DAX,ADOTAR,LINGUAGENS & FRAMEWORKS,False,no change,"<p><strong>Modelação e Frameworks</strong></p>
 <p>No Microsoft Fabric, é possivel implementar capacidades de observabilidade no Power BI usando expressões DAX combinadas com fontes de telemetria.(ex: duração de consultas, falhas de atualização, comportamento do usuário) </p>","Monitorização
 Observabilidade",none
+Scala,ESPERAR,LINGUAGENS & FRAMEWORKS,True,new,"The Scala Programming Language
+Pick your favorite notebook. Run massively distributed big data pipelines; train NLP or ML models; perform numerical analysis; visualize data and more
+Reactive UI's backed by types. Use the same Scala libraries across the stack. Integrate with the JavaScript library and tooling ecosystem.","Processamento
+Consulta",new
 Application Insights,AVALIAR,FERRAMENTAS,True,new,"<p><strong>Monitorização e Observabilidade</strong></p>
 <p>Ferramenta customizada para implementar capacidades de monitorização e observabilidade de aplicações<p>
 <p>É uma ferramenta de monitoramento e diagnóstico (parte do Azure Monitor) usada para rastrear: </p>
@@ -238,6 +242,10 @@ Azure Key Vault,ADOTAR,FERRAMENTAS,True,new,"<p><strong>Segurança e Operações
 <p>4. Pipelines de CI/CD</p>
 <p><strong><a href=""https://azure.microsoft.com/en-us/products/key-vault"">Azure Key Vault</p>","Segurança
 Operações",new
+CluedIn,ESPERAR,FERRAMENTAS,True,new,"CluedIn - Microsoft Master Data Management
+Modern master data management that integrates seamlessly with the Microsoft Data and Analytics suite to deliver data governance","Metadata
+Catalogação
+Governação",new
 Azure AI Services,ESPERAR,PLATAFORMAS,True,new,"<p><strong>Inteligência Artificial & Machine Learning</strong></p>
 <p><strong><a href=""https://azure.microsoft.com/en-us/products/ai-services"">Azure AI services</p>","Inteligência Artificial
 Machine Learning",new
@@ -731,11 +739,3 @@ This technique bridges:
 3. Platform usability
 4. Search, metadata, and classification strategy","Pesquisa
 Descoberta",new
-CluedIn,ESPERAR,FERRAMENTAS,True,new,"CluedIn - Microsoft Master Data Management
-Modern master data management that integrates seamlessly with the Microsoft Data and Analytics suite to deliver data governance","Metadata
-Catalogação
-Governação",new
-Scala,ESPERAR,LINGUAGENS & FRAMEWORKS,True,new,"The Scala Programming Language
-Pick your favorite notebook. Run massively distributed big data pipelines; train NLP or ML models; perform numerical analysis; visualize data and more
-Reactive UI's backed by types. Use the same Scala libraries across the stack. Integrate with the JavaScript library and tooling ecosystem.","Processamento
-Consulta",new
