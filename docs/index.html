@@ -144,23 +144,58 @@
             onQuadrantClick(-1);
          });
 
-
-      document.getElementById("searchInput").addEventListener("input", function () 
-      {
+      let inputTimeout;   
+      document.getElementById("searchInput").addEventListener("input", function () {
          const query = this.value.toLowerCase();
-         d3.selectAll(".blip").style("opacity", d => {
-            return d.label.toLowerCase().includes(query) ? 1 : 0.1;
-         });
-         });
 
-         // Optional: Keyboard shortcut Ctrl+K
-         document.addEventListener("keydown", function (e) {
+         // 1. Filter blips based on query
+         d3.selectAll(".blip").style("opacity", d =>
+            d.label.toLowerCase().includes(query) ? 1 : 0.1
+         );
+
+         // 2. Debounced zoom-to-blip or reset
+         clearTimeout(inputTimeout);
+         inputTimeout = setTimeout(() => {
+            if (!query) {
+               onQuadrantClick(-1); // 🟢 Reset view
+               return;
+            }
+
+            const matches = cachedEntries.filter(entry =>
+               entry.label.toLowerCase().includes(query)
+            );
+            const uniqueQuadrants = [...new Set(matches.map(d => d.quadrant))];
+            targetQuadrant = uniqueQuadrants[0];
+            if (uniqueQuadrants.length === 1)
+            {
+               if (window.selectedZoomedQuadrant != targetQuadrant)
+               {
+                     zoomToQuadrant(targetQuadrant);
+               } 
+            } 
+            else 
+            {
+               onQuadrantClick(-1); // Reset view
+            }
+         }, 300);
+      });
+      // Optional: Keyboard shortcut Ctrl+K
+      document.addEventListener("keydown", function (e) 
+      {
          if ((e.ctrlKey || e.metaKey) && e.key === "k") {
             e.preventDefault();
             document.getElementById("searchInput").focus();
          }
-         });
-      });      
+      });
+      zoomToBlipByLabel(document.getElementById('searchInput').value, cachedEntries);
+
+      document.getElementById("searchInput").addEventListener("keydown", (event) => 
+      {
+         if (event.key === "Enter") {
+            zoomToBlipByLabel(document.getElementById('searchInput').value, cachedEntries);
+         }
+      });
+   });      
    </script>
       <div id="blipModal" class="modal">
          <div class="modal-content">

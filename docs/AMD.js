@@ -107,6 +107,59 @@ function closeModal() {
   modal.style.display = "none";
 }
 
+function zoomToQuadrant(quadrant) {
+ {
+      window.selectedZoomedQuadrant = quadrant ; 
+      // Zoom to that quadrant
+      onQuadrantClick(quadrant);
+
+      // Optionally highlight all matching blips after zoom animation
+      setTimeout(() => {
+        matches.forEach(m => highlightBlip(m.label));
+      }, 1000); // adjust delay to match zoom
+    }
+}
+
+function highlightBlip(entry) {
+  const blip = d3.selectAll(".blip").filter(d => d.id === entry.id);
+  if (!blip.empty()) {
+    blip.selectAll("circle, path")
+      .classed("pulse", true)
+      .transition()
+      .duration(200)
+      .attr("transform", "scale(2.2)")
+      .transition()
+      .duration(200)
+      .attr("transform", "scale(1.8)");
+  }
+}
+
+function centerViewOnBlip(entry) {
+  const svgElement = d3.select("svg#radar");
+  const viewBox = svgElement.attr("viewBox").split(" ").map(Number);
+  const scale = viewBox[2] / config.width; // estimate current zoom level
+
+  const centerX = entry.x;
+  const centerY = entry.y;
+
+  const newViewBox = [
+    centerX - viewBox[2] / 2,
+    centerY - viewBox[3] / 2,
+    viewBox[2],
+    viewBox[3]
+  ];
+
+  animateViewBox(svgElement, viewBox, newViewBox, 800, d3.easeCubicInOut);
+}
+
+// Hook to search input (example)
+document.getElementById('searchInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    zoomToBlipByLabel(e.target.value.trim());
+  }
+});
+
+
 // Close on X click
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".close-btn").onclick = closeModal;
