@@ -276,7 +276,7 @@ div#footer p {
   to { opacity: 0; }
 }
 
-  .top-controls {
+ .top-controls {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -284,27 +284,56 @@ div#footer p {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-family: sans-serif;
   }
 
-  .top-controls button,
-  .top-controls input {
+  #resetRadarBtn {
+    padding: 8px 12px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 13px;
+    transition: background-color 0.3s ease;
   }
 
-  .top-controls input {
+  #resetRadarBtn:hover,
+  #resetRadarBtn:focus {
+    background-color: #666;
+    outline: none;
+  }
+
+  #searchContainer input {
     padding: 6px 28px 6px 28px;
     border-radius: 999px;
     border: none;
     background: #f7f5f2;
     color: #888;
+    font-size: 14px;
+    width: 160px;
   }
 
-  .top-controls input:focus {
+  #searchContainer input:focus {
     outline: 2px solid #aaa;
+    background-color: #fff;
   }
 
-  .top-controls span {
+  .search-icon {
     position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     pointer-events: none;
     color: #aaa;
+  }
+
+  .shortcut-hint {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #aaa;
+    pointer-events: none;
   }
