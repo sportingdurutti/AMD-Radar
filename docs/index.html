@@ -21,9 +21,15 @@
       </div>
       <div id='container'>
          <div id='left'>
-            <button id="resetRadarBtn" 
-               style="position: fixed;top: 20px;right: 20px;z-index: 1000;padding: 8px 12px;background-color: #444;color: white;border: none;border-radius: 4px;cursor: pointer;font-size: 13px;">Reset View
-            </button>
+             <div class="top-controls">
+               <button id="resetRadarBtn">Reset View</button>
+
+               <div id="searchContainer">
+                  <input id="searchInput" type="text" placeholder="Search..." />
+                  <span>🔍</span>
+                  <span>Ctrl + K</span>
+               </div>
+            </div>
             <div class="tag-container" id="tagDisplay"></div> 
          </div>
          <div id='content'>
@@ -129,6 +135,7 @@
 
       document.getElementById('resetRadarBtn').addEventListener('click', () => 
       {
+            document.getElementById('searchInput').value = "";
             document.querySelectorAll('.tag-container .tag.selected').forEach(tagEl => {
                   tagEl.classList.remove('selected');
             });
@@ -137,7 +144,24 @@
             draw_radar(cachedEntries, -1);
             onQuadrantClick(-1);
          });
-   });      
+
+
+      document.getElementById("searchInput").addEventListener("input", function () 
+      {
+         const query = this.value.toLowerCase();
+         d3.selectAll(".blip").style("opacity", d => {
+            return d.label.toLowerCase().includes(query) ? 1 : 0.1;
+         });
+         });
+
+         // Optional: Keyboard shortcut Ctrl+K
+         document.addEventListener("keydown", function (e) {
+         if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+            e.preventDefault();
+            document.getElementById("searchInput").focus();
+         }
+         });
+      });      
    </script>
       <div id="blipModal" class="modal">
          <div class="modal-content">
