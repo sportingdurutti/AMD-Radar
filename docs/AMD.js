@@ -37,40 +37,67 @@ function listofTags(entries) {
 }
 
 function filterRadar(quadrant) {
-    // 1. Get selected pills (tags)
-    const selectedTags = Array.from(
-        document.querySelectorAll('.tag-container .tag.selected')
-    ).map(tagEl => tagEl.textContent);
+  // 1. Get selected tags
+  const selectedTags = Array.from(
+    document.querySelectorAll('.tag-container .tag.selected')
+  ).map(tagEl => tagEl.textContent);
 
-    // 2. Clear radar content
-    let radarSvg = document.getElementById("radar");
-    radarSvg.innerHTML = "";
+  // 2. Get current search query
+  const searchInput = document.getElementById("searchInput");
+  const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
 
-    // 3. Reload and filter CSV
-    fetch('./AMD_Radar_vf.csv')
-        .then(resp => resp.text())
-        .then(csv => {
-            const entries = d3.csvParse(csv, row => toEntry(row));
+  // 3. Clear radar content
+  let radarSvg = document.getElementById("radar");
+  radarSvg.innerHTML = "";
 
-            if (selectedTags.length === 0) {
-                // No selection — show full radar
-                draw_radar(entries, quadrant);
-                return;
-            }
+  // 4. Filter from already-loaded entries (no need to fetch again!)
+  const filteredEntries = cachedEntries.filter(entry => {
+    const entryTags = entry.tag
+      ? entry.tag.split(/\r?\n/).map(t => t.trim())
+      : [];
+    const tagMatch =
+      selectedTags.length === 0 || selectedTags.some(tag => entryTags.includes(tag));
+    const labelMatch = entry.label.toLowerCase().includes(query);
+    return tagMatch && labelMatch;
+  });
 
-            // 4. Filter entries based on matching at least one tag
-            const filtered_entries = entries.filter(entry => {
-                const entryTags = entry.tag
-                    ? entry.tag.split(/\r?\n/).map(t => t.trim())
-                    : [];
+  // 5. Update radar visualization
+  draw_radar(filteredEntries, quadrant);
 
-                return selectedTags.some(tag => entryTags.includes(tag));
-            });
-            draw_radar(filtered_entries, quadrant);
-        });
+  // 6. Highlight matching blips (opacity)
+  d3.selectAll(".blip").style("opacity", d => {
+    return filteredEntries.includes(d) ? 1 : 0.1;
+  });
+
+  // 7. Zoom to quadrant if exactly one unique quadrant matched
+  const uniqueQuadrants = [...new Set(filteredEntries.map(d => d.quadrant))];
+  if (uniqueQuadrants.length === 1) {
+    const targetQuadrant = uniqueQuadrants[0];
+    if (window.selectedZoomedQuadrant !== targetQuadrant) {
+      if (window.modalOpen) {
+        closeModal();
+      }
+      zoomToQuadrant(targetQuadrant);
+    }
+  } else {
+    if (window.modalOpen) {
+      closeModal();
+    }
+    onQuadrantClick(-1); // Reset view
+  }
+
+  // 8. Zoom to blip / open modal if exactly one match
+  if (filteredEntries.length === 1) {
+    if (!window.modalOpen) {
+      window.modalOpen = true;
+      zoomToBlip(filteredEntries[0]);
+    }
+  }
 }
 
 function openModal(content) {
+
+  window.modalOpen = true;
   const existing = document.getElementById("modalContainer");
   if (existing) existing.remove();
 
@@ -82,23 +109,36 @@ function openModal(content) {
   modal.className = "modal-content";
   modal.innerHTML = content;
 
-  container.appendChild(modal);
-  document.body.appendChild(container);
 
-  container.addEventListener("click", () => {
-    // Use same timing as opening
+   modal.addEventListener("click", () => {
     modal.style.animation = "scaleOut 0.4s ease-in-out forwards";
     container.style.animation = "fadeOut 0.4s ease-in-out forwards";
-
+    window.modalOpen = false;
     setTimeout(() => container.remove(), 400);
   });
+
+  container.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent bubbling, do not close
+  });
+
+  // container.addEventListener("click", () => {
+  //   // Use same timing as opening
+  //   modal.style.animation = "scaleOut 0.4s ease-in-out forwards";
+  //   container.style.animation = "fadeOut 0.4s ease-in-out forwards";
+  //   window.modalOpen = false;
+
+  //   setTimeout(() => container.remove(), 400);
+  // });
+      container.appendChild(modal);
+  document.body.appendChild(container);
+
 }
 
 function closeModal() {
-  const modal = document.getElementById("blipModal");
+  window.modalOpen = false;
+  const modal = document.getElementById("modalContainer");
   modal.style.display = "none";
 }
-
 
 function zoomToBlip(d) 
 {

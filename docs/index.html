@@ -82,8 +82,6 @@
                    grid: "#bbb",
                    inactive: "#ddd"
                  },
-                 // Some font families might lead to font size issues
-                 // Arial, Helvetica, or Source Sans Pro seem to work well though
                  font_family: "FlamaCondensed-Basic,system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
                  title: "Radar para suporte á evolução estratégia da Arquitetura Moderna de Dados ",
                  legend_column_width: 200,
@@ -105,7 +103,6 @@
                  entries: my_entries
              });
          }
-         
          function toEntry(row) {
              return {
                  label: row.name,
@@ -143,63 +140,83 @@
             d3.select("#radar").selectAll("*").remove();
             draw_radar(cachedEntries, -1);
             onQuadrantClick(-1);
+            if (window.modalOpen) closeModal();
          });
 
       let inputTimeout;   
-      document.getElementById("searchInput").addEventListener("input", function () {
-         const query = this.value.toLowerCase();
-
-         // 1. Filter blips based on query
-         d3.selectAll(".blip").style("opacity", d =>
-            d.label.toLowerCase().includes(query) ? 1 : 0.1
-         );
-
-         // 2. Debounced zoom-to-blip or reset
-         clearTimeout(inputTimeout);
-         inputTimeout = setTimeout(() => {
-            if (!query) {
-               onQuadrantClick(-1); // 🟢 Reset view
-               return;
-            }
-            const matches = cachedEntries.filter(entry =>entry.label.toLowerCase().includes(query));
-            const uniqueQuadrants = [...new Set(matches.map(d => d.quadrant))];
-            targetQuadrant = uniqueQuadrants[0];
-            if (matches.length === 1) 
+      document.getElementById("searchInput").addEventListener("input", function () 
+      {
+         const query = this.value.toLowerCase().trim();
+         // Get selected tags
+         const selectedTags = Array.from(document.querySelectorAll('.tag-container .tag.selected')).map(tagEl => tagEl.textContent);
+         // Filter entries based on query and tags
+         const matches = cachedEntries.filter(entry => 
+         {
+            const labelMatch = entry.label.toLowerCase().includes(query);
+            const entryTags = entry.tag
+                  ? entry.tag.split(/\r?\n/).map(t => t.trim())
+                  : [];
+            const tagMatch = selectedTags.length === 0 || selectedTags.some(tag => entryTags.includes(tag));
+            return labelMatch && tagMatch;
+         });
+         // Highlight matching blips
+         d3.selectAll(".blip").style("opacity", d => {
+            return matches.includes(d) ? 1 : 0.1;
+         });
+         //  Zoom to quadrant 
+         const uniqueQuadrants = [...new Set(matches.map(d => d.quadrant))];
+         // More than one: Reset 
+         if (uniqueQuadrants.length > 1) 
+         {
+            // Close Modal fi its opened 
+            if (window.modalOpen == true)
             {
-               if (window.selectedZoomedQuadrant != targetQuadrant)
+               closeModal();
+            }
+            onQuadrantClick(-1); // Reset if not exactly one quadrant
+            d3.select("#radar").selectAll("*").remove();
+            draw_radar(matches, -1);  // Redraw with updated matches
+         } 
+         if (uniqueQuadrants.length === 1) 
+         {
+            const targetQuadrant = uniqueQuadrants[0];
+            // Only One: Reset if not already there 
+            if (window.selectedZoomedQuadrant !== targetQuadrant) 
+            {
+               // Also reset Modal if its opened 
+               if (window.modalOpen == true)
                {
-                     zoomToQuadrant(targetQuadrant);
-               } 
-              if (window.modalOpen == false)
+                  closeModal();
+               }
+               zoomToQuadrant(targetQuadrant);
+               if (matches.length === 1) 
                {
-                  zoomToBlip(matches[0]);
                   window.modalOpen = true;
+                  zoomToBlip(matches[0]); // Assuming this function already exists
                }
             }
-            else
-             {
-               //const uniqueQuadrants = [...new Set(matches.map(d => d.quadrant))];
-               //targetQuadrant = uniqueQuadrants[0];
-               if (window.modalOpen)
+            if (window.selectedZoomedQuadrant == targetQuadrant) 
+            {
+               //Reopen modal with new content
+               if (matches.length === 1) 
                {
-                  const modal = document.getElementById("modalContainer");                  
-                  modal.style.display = "none";
-                  window.modalOpen = false;
-               }
-
-               if (uniqueQuadrants.length === 1)
-               {
-                  if (window.selectedZoomedQuadrant != targetQuadrant)
+                  if (window.modalOpen == false)
                   {
-                        zoomToQuadrant(targetQuadrant);
-                  } 
-               } 
-               else 
-               {
-                  onQuadrantClick(-1); // Reset view
+                     window.modalOpen = true;
+                     zoomToBlip(matches[0]); // Assuming this function already exists
+                  }
+               }
+               else
+               {            
+                  if (window.modalOpen == true)
+                  {
+                     closeModal();
+                  }
+                  d3.select("#radar").selectAll("*").remove();
+                  draw_radar(matches, targetQuadrant);  // Redraw radar with new matches
                }
             }
-         }, 300);
+         }
       });
       // Optional: Keyboard shortcut Ctrl+K
       document.addEventListener("keydown", function (e) 
@@ -219,11 +236,5 @@
       });
    });      
    </script>
-      <div id="blipModal" class="modal">
-         <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div id="modalText"></div>
-         </div>
-      </div>
    </body>
 </html>

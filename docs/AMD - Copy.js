@@ -93,39 +93,79 @@ function listofTags_old(set)
     }
  }
 
- function filterRadar() {
-    // 1. Get selected pills (tags)
+ function filterRadar() 
+ {
+    alert('new');
+        // 1. Get selected tags
     const selectedTags = Array.from(
         document.querySelectorAll('.tag-container .tag.selected')
     ).map(tagEl => tagEl.textContent);
 
-    // 2. Clear radar content
+    // 2. Get current search query
+    const searchInput = document.getElementById("searchInput");
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
+
+    // 3. Clear radar content
     let radarSvg = document.getElementById("radar");
     radarSvg.innerHTML = "";
 
-    // 3. Reload and filter CSV
+    // 4. Reload and filter CSV
     fetch('./AMD_Radar_vf.csv')
-        .then(resp => resp.text())
-        .then(csv => {
-            const entries = d3.csvParse(csv, row => toEntry(row));
-
-            if (selectedTags.length === 0) {
-                // No selection — show full radar
-                //draw_radar(entries);
-                return;
-            }
-
-            // 4. Filter entries based on matching at least one tag
-            const filtered_entries = entries.filter(entry => {
-                const entryTags = entry.tag
-                    ? entry.tag.split(/\r?\n/).map(t => t.trim())
-                    : [];
-
-                return selectedTags.some(tag => entryTags.includes(tag));
-            });
-
-            draw_quadrant(filtered_entries);
+      .then(resp => resp.text())
+      .then(csv => {
+        const entries = d3.csvParse(csv, row => toEntry(row));
+        const filteredEntries = entries.filter(entry => {
+          // Tag filter
+          const entryTags = entry.tag
+            ? entry.tag.split(/\r?\n/).map(t => t.trim())
+            : [];
+            const tagMatch =
+            selectedTags.length === 0 || selectedTags.some(tag => entryTags.includes(tag));
+          // Search filter
+          const labelMatch = entry.label.toLowerCase().includes(query);
+          return tagMatch && labelMatch;
         });
+        draw_radar(filteredEntries, quadrant);
+      });
+
+      // 6. Highlight matching blips (opacity)
+      d3.selectAll(".blip").style("opacity", d => 
+      {
+        return filteredEntries.includes(d) ? 1 : 0.1;
+      });
+
+       // 7. Zoom to quadrant if exactly one unique quadrant matched
+      const uniqueQuadrants = [...new Set(filteredEntries.map(d => d.quadrant))];
+      if (uniqueQuadrants.length === 1) 
+      {
+        const targetQuadrant = uniqueQuadrants[0];
+        if (window.selectedZoomedQuadrant !== targetQuadrant) 
+        {
+            if (window.modalOpen) 
+            {
+                closeModal();
+            }
+            zoomToQuadrant(targetQuadrant);
+        }
+      } 
+      else 
+      {
+        if (window.modalOpen) 
+        {
+            closeModal();
+        }
+        onQuadrantClick(-1); // Reset view
+      }
+       // 8. Zoom to blip / open modal if exactly one match
+      if (filteredEntries.length === 1) 
+      {
+        if (!window.modalOpen) 
+          {
+            window.modalOpen = true;
+            zoomToBlip(filteredEntries[0]);
+        }
+      }
+
 }
 
 function filterRadar1() 
