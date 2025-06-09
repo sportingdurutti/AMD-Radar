@@ -35,7 +35,7 @@
             <svg id="radar"></svg>
          </div>
       </div>
-      <!-- <div id='footer'> -->
+      <div id='footer'>
          <!-- <table>
             <tr>
                <td>
@@ -68,7 +68,7 @@
                </td>
             </tr>
          </table> -->
-      <!-- </div> -->
+      </div>
       <script>
          function draw_radar(my_entries, quadrant) {
              radar_visualization({
@@ -235,6 +235,14 @@
          }
       });
    });      
+   </script>
+   <script>
+      fetch('./version.txt')
+      .then(response => response.text())
+      .then(version => {
+         const footer = document.getElementById('footer');
+         footer.textContent += ' — Version: ' + version.trim();
+      });
    </script>
    </body>
 </html>

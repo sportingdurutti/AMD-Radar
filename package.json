@@ -1,6 +1,6 @@
 {
   "name": "amd_radar",
-  "version": "2024.1.0",
+  "version": "2025.0.4",
   "description": "Visualizing our Architecture radar choices",
   "homepage": "",
   "repository": "",
@@ -19,6 +19,7 @@
     "start": "browser-sync docs -w",
     "lint": "npm run lint:js && npm run lint:html",
     "lint:js": "eslint docs/*.js",
-    "lint:html": "eslint docs/*.html"
+    "lint:html": "eslint docs/*.html",
+    "bump-version": "node bump-version.js"
   }
 }
