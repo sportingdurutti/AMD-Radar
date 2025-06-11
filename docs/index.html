@@ -16,28 +16,54 @@
    </head>
    <body>
       <div id='heading'>
-        <div class="header"></div>
-            <!-- <div class="brand"><img src="../OM.PNG" alt="SHS Logo" class = "wrap-img"><a
-                href="../">OmNis - Insights into the Target Architecture Radar for the Modern Data Architecture</a></div>
-            </div>-->
+        <div class="header">
+            <div class="top-controls">
+               <div id="searchContainer" style="position: relative;">
+                  <input id="searchInput" type="text" placeholder="Search..." />
+                  <span class="search-icon">🔍</span>
+                  <span class="shortcut-hint">Ctrl + K</span>
+               </div>
+               <button id="resetRadarBtn">Reset View</button>
+            </div>      
+         </div>      
       </div>
       <div id='container'>
          <div id='left'>
-            <div class="top-controls">
-            <div id="searchContainer" style="position: relative;">
-               <input id="searchInput" type="text" placeholder="Search..." />
-               <span class="search-icon">🔍</span>
-               <span class="shortcut-hint">Ctrl + K</span>
-            </div>
-            <button id="resetRadarBtn">Reset View</button>
-            </div>            
-         <div class="tag-container" id="tagDisplay"></div> 
+            <div id = "version"></div>
+            <div class="tag-container" id="tagDisplay"></div> 
          </div>
          <div id='content'>
             <svg id="radar"></svg>
          </div>
       </div>
       <div id='footer'>
+         <div class="ring-toolbar">
+            <div class="ring-label">
+                  <strong>ADOTAR</strong>
+                  <span class="tooltip-icon">❔
+                     <span class="tooltip-text">Acreditamos firmemente que devemos adotar estes itens. Devem ser utilizados apropriadamente..</span>
+                  </span>
+            </div>
+            <div class="ring-label">
+                  <strong>TESTAR</strong>
+                  <span class="tooltip-icon">❔
+                     <span class="tooltip-text">O que acreditamos estar pronto para uso potencial, mas não tão completamente comprovado quanto as identificadas no ciclo de adoção.
+Vale a pena investir. É importante entender como desenvolver as capacidades identificadas. A utilização é considerada quando o risco for aceite.</span>
+                  </span>
+            </div>
+            <div class="ring-label">
+                  <strong>AVALIAR</strong>
+                  <span class="tooltip-icon">❔
+                     <span class="tooltip-text">O que vale a pena analisar atentamente, mas não necessariamente testar ainda — a menos sejam particularmente adequadas. Vale a pena explorar com o objetivo de entender as implicações futoras de teste e adoção.</span>
+                  </span>
+            </div>
+            <div class="ring-label">
+                  <strong>ESPERAR</strong>
+                  <span class="tooltip-icon">❔
+                     <span class="tooltip-text">Prosseguir om cautela.</span>
+                  </span>
+            </div>
+         </div>
          <!-- <table>
             <tr>
                <td>
@@ -77,7 +103,7 @@
                 repo_url: "",
                  svg_id: "radar",
                  width: 1600,
-                 height: 920,
+                 height: 980,
                  scale: 1.0,
                  colors: {
                    background: "#fff",
@@ -195,6 +221,8 @@
                {
                   window.modalOpen = true;
                   zoomToBlip(matches[0]); // Assuming this function already exists
+                  d3.select("#radar").selectAll("*").remove();
+                  draw_radar(matches, targetQuadrant)
                }
             }
             if (window.selectedZoomedQuadrant == targetQuadrant) 
@@ -206,6 +234,8 @@
                   {
                      window.modalOpen = true;
                      zoomToBlip(matches[0]); // Assuming this function already exists
+                     d3.select("#radar").selectAll("*").remove();
+                     draw_radar(matches, targetQuadrant)
                   }
                }
                else
@@ -242,8 +272,8 @@
       fetch('./version.txt')
       .then(response => response.text())
       .then(version => {
-         const footer = document.getElementById('footer');
-         footer.textContent += ' — Version: ' + version.trim();
+         const footer = document.getElementById('version');
+         footer.textContent += 'Version: ' + version.trim();
       });
    </script>
    </body>

@@ -200,7 +200,11 @@ div#footer p {
   text-transform: uppercase;
   border-bottom: 2px solid #ddd;
   padding-bottom: 8px;
+    background-color: #163c4d;
+    color: #fff;
+    padding: .75rem 1rem
 }
+
 
 .modal-description {
   font-size: 15px;
@@ -286,6 +290,7 @@ div#footer p {
     gap: 10px;
     font-family: sans-serif;
     z-index: 2000; /* Higher than modal */
+    margin-top: 0px;
   }
 
   #resetRadarBtn {
@@ -338,3 +343,65 @@ div#footer p {
     color: #aaa;
     pointer-events: none;
   }
+
+  .ring-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f3f5;
+  padding: 12px 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 0px; /* Adjust depending on position relative to search/reset */
+}
+
+.ring-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #222;
+}
+
+.tooltip-icon {
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  background-color: #066f;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: bold;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #222;
+  color: #fff;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: -45px;
+  left: 0;
+  width: 240px;
+  font-size: 12px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
+}
+
+.tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+

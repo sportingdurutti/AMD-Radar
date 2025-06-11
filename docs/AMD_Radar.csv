@@ -388,134 +388,237 @@ Azure Monitor,AVALIAR,PLATAFORMAS,True,new,"<p><strong>Monitorização e Observa
 <p>Funcionalidades de monitorização e observabilidade geridos (por exemplo, Azure Monitor, AWS CloudWatch, Google Cloud Operations Suite) </p>
 <p><strong><a href=""https://azure.microsoft.com/en-us/products/monitor/?ef_id=_k_Cj0KCQjww-HABhCGARIsALLO6XxSqEexyrUawSv2uyCJkJ7okojO5jK7HWGU9fz947lC0mlMVoEPHjoaAmlkEALw_wcB_k_&OCID=AIDcmmj8drqamm_SEM__k_Cj0KCQjww-HABhCGARIsALLO6XxSqEexyrUawSv2uyCJkJ7okojO5jK7HWGU9fz947lC0mlMVoEPHjoaAmlkEALw_wcB_k_&gad_source=1&gclid=Cj0KCQjww-HABhCGARIsALLO6XxSqEexyrUawSv2uyCJkJ7okojO5jK7HWGU9fz947lC0mlMVoEPHjoaAmlkEALw_wcB"">Azure Log Analytics</p>","Monitorização
 Observabilidade",new
-Policy-Driven Data Protection and Compliance Enforcement for Data Products,AVALIAR,TÉCNICAS,True,new,"<p><strong>Segurança e Conformidade</strong></p>
-<p>Security governance mechanism to detect and restrict sharing or movement of sensitive data within Fabric artifacts (e.g., lakehouses, datasets, reports); integrates with Microsoft Purview DLP engine and compliance center
-Establishes the use of sensitivity labels, automated classification, and data loss prevention policies to enforce compliance and access controls across datasets, reports, lakehouses, and semantic models. Enables federated governance with centralized guardrails, export blocking, and audit workflows. Supports policy inheritance, integration with cataloging tools (e.g., Purview), and aligns with secure data product delivery strategies.
-Reinforced by:
-1. Data Loss Prevention Policies
-2. Unified Role-Based Access Governance
-3. Item-Level Permissions
-4. Federated Identity Governance
-5. Governance Default Policies (future)
-6. Lineage View
-7. Microsoft Purview (Tool)
-8. Fabric Semantic Models, Reports, Datasets</p>
-<p><strong><a href=""https://www.microsoft.com/en-us/security/business/security-101/what-is-data-loss-prevention-dlp"">Data Loss Prevention Policies</p>","Segurança
+Proteção de Dados e Conformidade Orientadas por Políticas para Produtos de Dados,AVALIAR,TÉCNICAS,True,new,"<p><strong>Segurança e Conformidade (Security & Compliance)</strong></p>
+<p>A proteção de dados e a aplicação de controlos e regras de conformidade orientadas por políticas é crucial para a proteção dos dados e manutenção de padrões legais. As abordagens envolvem a definição de políticas claras que regulam o tratamento, a segurança e a privacidade dos dados, e a implementação de mecanismos para garantir que essas políticas sejam seguidas de forma consistente em todos os produtos de dados disponibilizados.</p>
+<p>Mecanismo de governação de segurança concebido para detetar e restringir a partilha ou movimentação de dados sensíveis dentro dos artefactos do Microsoft Fabric (ex: lakehouses, conjuntos de dados, relatórios). Integra-se com o motor de Políticas de Prevenção de Perda de Dados (Data Loss Prevention, DLP) do Microsoft Purview e com o Centro de Conformidade.</p>
+<p>Estabelece o uso de etiquetas de sensibilidade, classificação automática e políticas DLP para aplicar controlos de acesso e garantir conformidade em toda a cadeia de dados — incluindo conjuntos de dados, relatórios, lakehouses e modelos semânticos. Permite uma governação federada com controlos centrais (""guardrails""), bloqueio de exportações e fluxos de auditoria.</p>
+<p>Suporta herança de políticas, integração com ferramentas de catalogação (ex: Microsoft Purview) e alinha-se com estratégias de entrega segura de produtos de dados.</p>
+<p><strong>Reforçado por:</strong></p>
+<ul>
+  <li>Políticas de Prevenção de Perda de Dados (Data Loss Prevention Policies)</li>
+  <li>Governação Unificada de Acessos Baseada em Funções (Unified Role-Based Access Governance)</li>
+  <li>Permissões a Nível de Item (Item-Level Permissions)</li>
+  <li>Governação Federada de Identidades (Federated Identity Governance)</li>
+  <li>Políticas de Governação Padrão <strong>(futuro)</strong> (Governance Default Policies)</li>
+  <li>Visualização de Linhagem (Lineage View)</li>
+  <li>Microsoft Purview (ferramenta de catalogação e conformidade)</li>
+  <li>Modelos Semânticos, Relatórios e Conjuntos de Dados do Fabric</li>
+</ul>","Segurança
 Conformidade",new
-Data Lifecycle Management,TESTAR,TÉCNICAS,True,new,"Fabric Lifecycle Management is an important emerging topic that goes beyond individual tools and speaks to governance, promotion, versioning, and automation across workspaces, pipelines, notebooks, models, and datasets in Microsoft Fabric.
-This is clearly a technique that should be added to your Radar, and it will tie together several tools and practices you've already mapped.
-Governance and automation pattern for promoting, versioning, validating, and monitoring Fabric assets (notebooks, pipelines, dataflows, semantic models, etc.) across environments such as Dev, Test, and Prod
-<p><strong><a href=""https://learn.microsoft.com/en-us/fabric/cicd/"">Fabric Lifecycle management</p>","Dados
+Gestão do Ciclo de Vida dos Dados,TESTAR,TÉCNICAS,True,new,"  <h3>Gestão do Ciclo de Vida dos Dados (Data Lifecycle Management)</h3>
+  <p><strong>Governança e Automação</strong></p>
+  <p>A Gestão do Ciclo de Vida é uma técnica emergente que vai além das ferramentas individuais, abrangendo práticas integradas de governação, promoção, versionamento e automação de ativos de dados e análises. Esta técnica aplica-se transversalmente aos espaços de trabalho (workspaces), notebooks, pipelines, dataflows, modelos semânticos e conjuntos de dados no Microsoft Fabric.</p>
+  <p>Trata-se de um padrão de governação e automação que permite gerir o ciclo completo de ativos analíticos — desde a promoção entre ambientes (ex: Desenvolvimento, Testes, Produção), até ao versionamento, validação, auditoria e monitorização contínua.</p>
+  <p><strong>Exemplos de ativos abrangidos:</strong> notebooks, pipelines, dataflows, modelos semânticos (semantic models), conjuntos de dados (datasets), etc.</p>
+  <p>Esta técnica interliga várias ferramentas e práticas eventualmente já adotadas na plataforma e é essencial para garantir a escalabilidade, rastreabilidade e segurança no desenvolvimento e operação de produtos de dados.</p>
+  <p><strong>Referência técnica:</strong> <a href=""https://learn.microsoft.com/en-us/fabric/cicd/"" target=""_blank"">Gestão de Ciclo de Vida no Microsoft Fabric (Fabric Lifecycle Management)</a></p>","Dados
 Governação",new
-CI/CD,ADOTAR,TÉCNICAS,False,new,"Formalizes automated build, validation, and deployment processes for versioned pipelines, notebooks, semantic models, and related data platform assets. Supports environment promotion workflows (Dev/Test/Prod), test harnesses, rollback strategies, and environment-as-code patterns to ensure consistency, traceability, and governance across delivery teams. Reinforced by Git-based workflows and integration with orchestration and access governance layers.
-Automation pattern for versioning, validating, and deploying data pipelines, notebooks, models, and configurations across environments using Git-based workflows and deployment pipelines
-Covers:
-1. Version control for:
-2. Notebooks
-3. Pipelines
-4. Dataflows
-5. Semantic models
-6. Lakehouse schema definitions
-Integration with:
-1. GitHub Actions (or Azure DevOps Pipelines)
-2. Workspace APIs
-3. Artifact packaging and promotion
-Validation steps:
-1. Code linting
-2. Pipeline testing (e.g., dry runs)
-3. Deployment checks
-Environment targets:
-1. Dev / Test / Prod promotion
-2. Role and permission enforcement at deploy time
-Reinforced by:
-1. Versioned and Automated Lifecycle Management for Platform Workloads
-2. Lifecycle Management for Bundled Fabric Artifacts Across Environments
-3. Pipeline-as-Code Patterns
-4. Delegated Operations Models
-5. Notebook Development Lifecycle
-6. GitHub Actions / CI/CD Tools
-7. Semantic Models, Pipelines, Lakehouses, Datasets
-<p>CI/CD (Continuous Integration/Continuous Delivery ou Deployment) é uma prática de desenvolvimento de software que automatiza o processo de integração de código, testes e implantação, visando acelerar e melhorar a qualidade das entregas. O CI (Integração Contínua) foca na integração regular de alterações no código, enquanto o CD (Entrega ou Implantação Contínua) automatiza a entrega dessas alterações para os ambientes de produção.</p>","Engenharia
+Integração Contínua/Entrega Contínua,ADOTAR,TÉCNICAS,False,new,"  <h3>CI/CD (Integração Contínua e Entrega/Implementação Contínua)</h3>
+  <p><strong>Automação e Governança</strong></p>
+  <p>CI/CD (Continuous Integration / Continuous Delivery ou Deployment) é uma prática moderna de desenvolvimento e operação que automatiza os processos de construção, validação e entrega de código. No contexto de plataformas de dados, esta técnica permite orquestrar e promover notebooks, pipelines, modelos semânticos e outros ativos de forma consistente e rastreável entre ambientes como Desenvolvimento (Dev), Testes (Test) e Produção (Prod).</p>
+  <p>Esta técnica formaliza a automação do versionamento, testes e deploy de componentes da plataforma de dados, utilizando fluxos de trabalho baseados em Git e pipelines de integração. Garante padrões de validação, rollback, controlo de permissões e governança durante todo o ciclo de vida de entrega.</p>
+  <p><strong>Inclui controlo de versão para:</strong></p>
+  <ul>
+    <li>Notebooks</li>
+    <li>Pipelines</li>
+    <li>Dataflows</li>
+    <li>Modelos Semânticos (Semantic Models)</li>
+    <li>Definições de Esquemas de Lakehouse</li>
+  </ul>
+  <p><strong>Integração com:</strong></p>
+  <ul>
+    <li>GitHub Actions (ou Azure DevOps Pipelines)</li>
+    <li>APIs de Espaços de Trabalho (Workspace APIs)</li>
+    <li>Empacotamento e Promoção de Artefactos (Artifact Packaging and Promotion)</li>
+  </ul>
+  <p><strong>Etapas de validação:</strong></p>
+  <ul>
+    <li>Linting de código</li>
+    <li>Testes de pipelines (ex: execuções simuladas — “dry runs”)</li>
+    <li>Validações de deployment</li>
+  </ul>
+  <p><strong>Ambientes de destino:</strong></p>
+  <ul>
+    <li>Promoção entre ambientes Dev / Test / Prod</li>
+    <li>Aplicação de papéis e permissões no momento do deployment</li>
+  </ul>
+  <p><strong>Reforçado por:</strong></p>
+  <ul>
+    <li>Gestão de Ciclo de Vida com Versionamento e Automação (Versioned and Automated Lifecycle Management for Platform Workloads)</li>
+    <li>Gestão de Artefactos do Fabric entre Ambientes (Lifecycle Management for Bundled Fabric Artifacts Across Environments)</li>
+    <li>Padrões de Pipeline como Código (Pipeline-as-Code Patterns)</li>
+    <li>Modelos de Operações Delegadas (Delegated Operations Models)</li>
+    <li>Ciclo de Vida de Desenvolvimento de Notebooks (Notebook Development Lifecycle)</li>
+    <li>Ferramentas de CI/CD (GitHub Actions / CI/CD Tools)</li>
+    <li>Modelos Semânticos, Pipelines, Lakehouses e Conjuntos de Dados (Datasets)</li>
+  </ul>","Engenharia
 Automação",up
-fine-grained access Control,AVALIAR,TÉCNICAS,True,new,"Practice of assigning fine-grained access to specific items (datasets, reports, notebooks, pipelines); complements workspace-level roles with targeted control over sensitive or shared resources
-Applies to:
-1. Power BI and Fabric items (e.g., reports, datasets, lakehouses, notebooks)
-2. Synapse artifacts (pipelines, notebooks)
-3. Azure ML, Purview, Databricks, etc.
-Allows granular control beyond what workspace roles alone offer
-Often tied to AAD groups, managed identities, or user-level access
-<p><strong><a href=""https://learn.microsoft.com/en-us/fabric/security/permission-model"">Azure Item Permissions</p>","Governação
+Controlo de Acesso Granular ,AVALIAR,TÉCNICAS,True,new,"  <h3>Controlo de Acesso Granular (Fine-Grained Access Control)</h3>
+  <p><strong>Segurança e Governança</strong></p>
+  <p>Prática de atribuir permissões detalhadas a itens específicos da plataforma de dados, tais como conjuntos de dados, relatórios, notebooks ou pipelines. Este controlo complementa os papéis atribuídos ao nível do workspace, permitindo uma gestão mais precisa de recursos sensíveis ou partilhados.</p>
+  <p>Permite uma gestão granular de permissões além dos papéis atribuídos ao nível do workspace, oferecendo maior flexibilidade e segurança.</p>
+  <p><strong>Aplica-se a:</strong></p>
+  <ul>
+    <li>Itens do Power BI e do Microsoft Fabric (ex: relatórios, conjuntos de dados, lakehouses, notebooks)</li>
+    <li>Artefactos do Synapse (ex: pipelines, notebooks)</li>
+    <li>Outras plataformas como Azure Machine Learning (Azure ML), Microsoft Purview e Databricks</li>
+  </ul>
+  <p>Tipicamente associado a grupos do Azure Active Directory (AAD), identidades geridas (Managed Identities) ou permissões ao nível de utilizador.</p>
+  <p><strong>Referência:</strong> <a href=""https://learn.microsoft.com/en-us/fabric/security/permission-model"">Permissões de Itens no Microsoft Fabric</a></p>
+</div>","Governação
 Controlo de Acessos",new
-DataLake Schema,ADOTAR,TÉCNICAS,True,new,"Flexible, schema-on-read or late-binding approach using open formats (e.g., Parquet, Delta); aligns with data lakehouse architecture; favors agility and scale over rigid structure
-Emphasizes:
-1. Schema evolution
-2. Partitioning, columnar storage
-3. Open formats over cloud storage (e.g., ADLS)
-Common in ADLS Gen2 + Delta Lake, Synapse Lake Database, Fabric Lakehouse
-<p><strong><a href=""https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-schemas"">Lakehouse Schema</p>",Persistência,new
-Data Lineage,TESTAR,TÉCNICAS,True,new,"Practice of visually or programmatically tracking data dependencies across items (e.g., pipelines, notebooks, datasets, semantic models); enables impact analysis, governance, and trust in Microsoft Fabric and modern data platforms
-Captures relationships across:
-1. Dataflows
-2. Pipelines
-3. Notebooks
-4. Lakehouses / Warehouses
-5. Reports and semantic models
-Useful for:
-1. Impact analysis (e.g., what breaks if a source changes?)
-2. Trust and auditability
-3. Documentation and governance
-4. Operational debugging
-<p><strong><a href=""https://docs.open-metadata.org/latest/how-to-guides/data-lineage/explore"">Lineage View</p>","Metadata
+"Estratégia de ""Schema-on-Read"" para Conceção e Governação de Esquemas em Lakehouse Abertos",ADOTAR,TÉCNICAS,True,new,"  <h3>Estratégia de ""Schema-on-Read"" para Conceção e Governação de Esquemas em Lakehouse Abertos (Schema-on-Read Strategy for Open Lakehouse Schema Design and Governance)</h3>
+  <p><strong>Definição</strong></p>
+  <p>Abordagem flexível de leitura de esquema em tempo de execução (""schema-on-read""), centrada em formatos abertos como <strong>Parquet</strong> e <strong>Delta Lake</strong>, que permite uma modelação tardia (late-binding) e favorece a agilidade e a escalabilidade em ambientes de dados distribuídos.</p>
+  <p><strong>Descrição</strong></p>
+  <p>Esta técnica promove uma conceção de esquema orientada à leitura e posterior à ingestão, alinhada com arquiteturas de lakehouse abertas. Em vez de impor uma estrutura rígida no momento de ingestão, os dados são armazenados em formatos otimizados e a estrutura é aplicada apenas no momento de leitura ou transformação.</p>
+  <p>Adota o uso de formatos abertos, como <strong>Parquet</strong> e <strong>Delta Lake</strong>, em serviços como <strong>Azure Data Lake Storage Gen2 (ADLS Gen2)</strong>, <strong>Microsoft Fabric Lakehouse</strong> ou <strong>Azure Synapse Lake Database</strong>. Suporta a evolução de esquemas ao longo do tempo, armazenamento colunar com particionamento lógico e governança centrada em metadados.</p>
+  <p>Esta abordagem facilita:</p>
+  <ul>
+    <li>Gestão de esquemas evolutivos e tolerância a alterações de estrutura</li>
+    <li>Aplicação de políticas de governação e validação no momento da leitura</li>
+    <li>Separação entre armazenamento físico e estrutura lógica</li>
+    <li>Integração com motores de execução como <strong>Apache Spark</strong> (via <strong>PySpark</strong> ou <strong>Spark SQL</strong>)</li>
+    <li>Modelação de zonas de dados (Raw/Bronze, Silver, Gold) com camadas esquematizadas logicamente</li>
+  </ul>
+  <p><strong>Exemplos de aplicação:</strong></p>
+  <ul>
+    <li>Leitura de ficheiros <code>Parquet</code> ou <code>Delta</code> a partir de <strong>ADLS Gen2</strong> por motores Spark</li>
+    <li>Utilização de <strong>Lakehouse no Microsoft Fabric</strong> com esquemas definidos apenas em camadas refinadas</li>
+    <li>Conceção de modelos de dados analíticos escaláveis sem necessidade de pré-ingestão estruturada</li>
+  </ul>
+</div>",Persistência,new
+Rastreabilidade e Visualização de Linhagem de Dados,TESTAR,TÉCNICAS,True,new,"  <h3>Rastreabilidade e Visualização de Linhagem de Dados (Data Lineage)</h3>
+
+  <p><strong>Definição</strong></p>
+  <p>Prática de rastreamento visual ou programático das dependências entre dados, permitindo compreender como os dados fluem entre diferentes artefactos e componentes de uma plataforma moderna de dados — incluindo pipelines, notebooks, conjuntos de dados, modelos semânticos e relatórios.</p>
+
+  <p><strong>Descrição</strong></p>
+  <p>A linhagem de dados (Data Lineage) capta as relações e dependências entre objetos em plataformas como o <strong>Microsoft Fabric</strong>, possibilitando análise de impacto, governação, auditoria e confiança nos fluxos de dados. Ajuda a documentar caminhos de transformação de dados e é essencial para diagnósticos operacionais e rastreabilidade.</p>
+
+  <p>Relações captadas entre:</p>
+  <ul>
+    <li>Dataflows (fluxos de dados)</li>
+    <li>Pipelines</li>
+    <li>Notebooks</li>
+    <li>Lakehouses e Armazéns de Dados (Warehouses)</li>
+    <li>Relatórios e Modelos Semânticos (Semantic Models)</li>
+  </ul>
+
+  <p>Casos de uso principais:</p>
+  <ul>
+    <li><strong>Análise de Impacto:</strong> identificar o que será afetado se uma fonte de dados for alterada</li>
+    <li><strong>Confiança e Auditoria:</strong> demonstrar origem e transformação dos dados</li>
+    <li><strong>Documentação e Governação:</strong> mapear dependências e promover transparência</li>
+    <li><strong>Depuração Operacional:</strong> ajudar a diagnosticar problemas em fluxos de dados</li>
+  </ul>
+
+  <p><strong>Referência:</strong> <a href=""https://docs.open-metadata.org/latest/how-to-guides/data-lineage/explore"" target=""_blank"">Lineage View — Open Metadata Docs</a></p>","Metadata
 Catalogação
 Lineage",new
-Semantic Model of Data,ADOTAR,TÉCNICAS,True,new,"Practice of building governed, reusable data abstractions that expose business metrics and logic over raw or curated data; foundational for Power BI, Microsoft Fabric, and self-service enablement
-Built using:
-1. Power BI datasets
-2. Fabric semantic models
-Defines:
-1. Measures, KPIs, calculated columns
-2. Relationships across tables
-3. Metadata (descriptions, labels, formatting)
-Sits between the lakehouse/warehouse and reports/dashboards
-Supports row-level security, role-based visibility, and reusability
-Establishes semantic models as standardized, reusable, and governed outputs of data products. Enables federated domain ownership, KPI consistency, and secure self-service analytics. Supports cross-source integration (lakehouse, shortcuts, warehouse), policy enforcement, CI/CD promotion, and automated reporting across the analytics platform.
-Reinforced by:
-1. Semantic Models (Platform Capability)
-2. SQL Endpoints for Data Product Access
-3. Item-Level Permissions
-4. Policy-Driven Data Protection
-5. Lifecycle Governance for Bundled Fabric Artifacts
-6. Delegated Operations Models
-7. Lineage View and Metrics Governance (future)
-You're formalizing semantic model design as:
-1. A data product output: standard, reusable, traceable
-2. A governance surface: versioned, reviewed, and permissioned
-3. A cross-domain integration layer: federated ownership, shared definitions
-4. A standard for metrics: enforcing KPI consistency and lineage
-5. An API-ready artifact: for Power BI, Excel, tools, and (future) headless BI use cases
-This positions semantic models at the core of:
-1. Analytics self-service
-2. Data product interface strategy
-3. Federated BI governance
-4. Report reuse and automation
-<p><strong><a href=""https://en.wikipedia.org/wiki/Semantic_data_model"">Semantic Models</p>","Dados
+Modelação Semântica,ADOTAR,TÉCNICAS,True,new,"  <h3>Modelo Semântico de Dados (Semantic Model of Data)</h3>
+
+  <p><strong>Definição</strong></p>
+  <p>Prática de construção de abstrações de dados reutilizáveis e governadas, que expõem métricas de negócio e lógica analítica sobre dados brutos ou curados. São fundamentais para plataformas como o <strong>Power BI</strong> e o <strong>Microsoft Fabric</strong>, permitindo a democratização da análise de dados através do autosserviço com governação.</p>
+
+  <p><strong>Descrição</strong></p>
+  <p>Os modelos semânticos situam-se entre os dados (lakehouse, warehouse) e os consumos analíticos (relatórios, dashboards), permitindo a definição estruturada de métricas, relações e regras de negócio. Suportam segurança a nível de linha, visibilidade baseada em funções e reutilização entre domínios.</p>
+
+  <p>Construído através de:</p>
+  <ul>
+    <li>Conjuntos de dados do Power BI</li>
+    <li>Modelos semânticos do Microsoft Fabric</li>
+  </ul>
+
+  <p>Permite definir:</p>
+  <ul>
+    <li>Medições, Indicadores-Chave de Desempenho (KPIs), colunas calculadas</li>
+    <li>Relacionamentos entre tabelas</li>
+    <li>Metadados (descrições, etiquetas, formatação)</li>
+  </ul>
+
+  <p>Estabelece os modelos semânticos como artefactos padronizados, reutilizáveis e governados no contexto de produtos de dados. Suporta:</p>
+  <ul>
+    <li>Propriedade federada por domínio</li>
+    <li>Consistência de métricas</li>
+    <li>Análises seguras e com autosserviço</li>
+    <li>Promoção entre ambientes via CI/CD</li>
+    <li>Relatórios automatizados e reutilizáveis</li>
+  </ul>
+
+  <p>Reflexo de um modelo semântico como:</p>
+  <ul>
+    <li><strong>Saída formal de um produto de dados:</strong> rastreável, reutilizável, padronizado</li>
+    <li><strong>Superfície de governação:</strong> versionado, validado, com controlo de permissões</li>
+    <li><strong>Camada de integração entre domínios:</strong> partilha de definições com governação federada</li>
+    <li><strong>Norma para métricas:</strong> assegura consistência e linhagem de KPIs</li>
+    <li><strong>Artefacto pronto para API:</strong> consumo por Power BI, Excel, ferramentas externas ou cenários de BI headless</li>
+  </ul>
+
+  <p><strong>Reforçado por:</strong></p>
+  <ul>
+    <li>Modelos Semânticos (Capacidade da Plataforma)</li>
+    <li>Exposição Governada via SQL Endpoints</li>
+    <li>Permissões a Nível de Item</li>
+    <li>Proteção de Dados orientada por Políticas</li>
+    <li>Governação do Ciclo de Vida para Artefactos do Fabric</li>
+    <li>Modelos de Operações Delegadas</li>
+    <li>Visualização de Linhagem e Governação de Métricas (futuro)</li>
+  </ul>
+
+  <p><strong>Referência:</strong> <a href=""https://en.wikipedia.org/wiki/Semantic_data_model"" target=""_blank"">Semantic Models — Wikipedia</a></p>","Dados
 Modelação",new
-Data Classification,ADOTAR,TÉCNICAS,True,new,"Classification mechanism that applies persistent tags to data artifacts (e.g., datasets, reports, notebooks); enables downstream enforcement of DLP policies, access restrictions, and compliance tracking across Microsoft Fabric and Power BI
-<p><strong><a href=""https://learn.microsoft.com/en-us/purview/sensitivity-labels"">Sensitivity Labels</p>","Dados
+Classificação de Dados,ADOTAR,TÉCNICAS,True,new,"  <h3>Classificação de Dados (Data Classification)</h3>
+
+  <p><strong>Definição</strong></p>
+  <p>Mecanismo de governação que aplica etiquetas persistentes (labels) aos artefactos de dados — como conjuntos de dados, relatórios e notebooks — com o objetivo de categorizar a sensibilidade e criticidade das informações. Estas classificações são fundamentais para desencadear políticas de proteção, como a Prevenção de Perda de Dados (Data Loss Prevention, DLP), restrições de acesso e mecanismos de auditoria e conformidade.</p>
+
+  <p><strong>Descrição</strong></p>
+  <p>A Classificação de Dados no Microsoft Fabric e Power BI permite aplicar <strong>etiquetas de sensibilidade</strong> (sensitivity labels) de forma persistente, o que viabiliza o controlo de acesso e a rastreabilidade ao longo de toda a cadeia de dados analíticos. Estas etiquetas podem ser definidas manualmente ou herdadas automaticamente com base em regras organizacionais.</p>
+
+  <p>Aplica-se a:</p>
+  <ul>
+    <li>Conjuntos de dados (datasets)</li>
+    <li>Relatórios (reports)</li>
+    <li>Notebooks e pipelines</li>
+    <li>Modelos semânticos</li>
+  </ul>
+
+  <p>Permite:</p>
+  <ul>
+    <li>Aplicação de políticas de Prevenção de Perda de Dados (DLP)</li>
+    <li>Bloqueio ou limitação de partilhas/exportações</li>
+    <li>Monitorização e rastreio de acessos e alterações</li>
+    <li>Hereditariedade automática de classificações ao longo dos artefactos</li>
+  </ul>
+
+  <p>Funciona como um componente central na estratégia de proteção e conformidade de dados em ambientes de dados empresariais modernos, permitindo governação federada com regras corporativas consistentes.</p>
+
+  <p><strong>Referência:</strong> <a href=""https://learn.microsoft.com/en-us/purview/sensitivity-labels"" target=""_blank"">Etiquetas de Sensibilidade — Microsoft Purview</a></p>","Dados
 Governação",new
-Coarse Grained Access Control,ADOTAR,TÉCNICAS,True,new,"Workspace Roles are a critical concept for access control, collaboration, and data security, especially in services like Synapse, Microsoft Fabric, Power BI, Databricks, and Azure ML. While not a service or tool, it's an architectural access model that applies to:
-1. Microsoft Fabric workspaces
-2. Azure Synapse workspaces
-3. Power BI workspaces
-4. Databricks and Azure ML
-Roles typically define:
-1. Who can create, manage, or share content
-2. Dataset refresh permissions, pipeline runs, model deployments
-<p><strong><a href=""https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces"">Microsoft Fabric Workspace Roles</p>","Governação
+Controlo de Acesso Baseado em Funções de Workspace,ADOTAR,TÉCNICAS,True,new,"  <h3>Controlo de Acesso Baseado em Funções de Workspace (Workspace Role-Based Access Control)</h3>
+  <p><strong>Definição</strong></p>
+  <p>Modelo de controlo de acesso em que permissões são atribuídas com base em papéis predefinidos (roles) no nível do espaço de trabalho (workspace). Este padrão é amplamente adotado em plataformas como Microsoft Fabric, Power BI, Azure Synapse, Databricks e Azure ML.</p>
+  <p><strong>Descrição</strong></p>
+  <p>O controlo de acesso baseado em funções de workspace permite a gestão centralizada de permissões em ambientes colaborativos. Cada função determina o que os utilizadores podem ver, editar, publicar ou partilhar dentro de um workspace. Esta abordagem facilita a aplicação de políticas de segurança consistentes, suportando fluxos de trabalho colaborativos e protegendo dados críticos.</p>
+  <p>Aplica-se a:</p>
+  <ul>
+    <li>Microsoft Fabric workspaces</li>
+    <li>Power BI workspaces</li>
+    <li>Azure Synapse Analytics workspaces</li>
+    <li>Databricks e Azure Machine Learning</li>
+  </ul>
+  <p>Permissões comuns incluem:</p>
+  <ul>
+    <li>Criação, edição e gestão de artefactos (ex: notebooks, pipelines, relatórios)</li>
+    <li>Partilha de conteúdo com outros utilizadores</li>
+    <li>Execução de pipelines e atualizações de datasets</li>
+    <li>Controlo de publicação e distribuição de modelos analíticos</li>
+  </ul>
+  <p>Complementa práticas como o controlo de acessos de baixa granularidade (fine-grained access control), políticas de identidade e etiquetas de sensibilidade. Em ambientes com múltiplos domínios, pode ser integrado em modelos de governação federada.</p>
+  <p><strong>Referência:</strong> <a href=""https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces"" target=""_blank"">Microsoft Fabric Workspace Roles</a></p>","Governação
 Controlo de Acessos",new
-Observability 2.0,AVALIAR,TÉCNICAS,True,new,"<p><strong>Observability is a Technique — it represents an architectural and operational practice for understanding system behavior, especially in distributed or cloud-native environments. We can infer multiple blips across quadrants based on how organizations implement Observability:
-</p>
-<p><strong><a href=""https://www.youtube.com/watch?v=IVpQeMDWysA"">Observability 2.0</a></strong> represents a shift from traditional, disparate monitoring tools to a unified approach that leverages structured, high-cardinality event data in a single data store. This model captures rich, raw events with detailed metadata to provide a single source of truth for comprehensive analysis. By storing events in their raw form, it simplifies correlation and supports real-time and forensic analysis and enables deeper insights into complex, distributed systems. This approach allows for high-resolution monitoring and dynamic investigation capabilities. Observability 2.0 prioritizes capturing high-cardinality and high-dimensional data, allowing detailed examination without performance bottlenecks. The unified data store reduces complexity, offering a coherent view of system behavior, and aligning observability practices more closely with the software development lifecycle.</p>","Monitorização
+Observability 2.0,AVALIAR,TÉCNICAS,True,new,,"Monitorização
 Observabilidade",new
 Database As a Service (DBaaS),TESTAR,TÉCNICAS,True,new,"The practice of deploying RDBMS engines using managed services to reduce operational overhead while aligning with cloud ops models.
 Shifts ops responsibility to the platform; encourages standardization on managed offerings.
