@@ -280,3 +280,19 @@ svg#radar {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+.blip {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.blip.hide {
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none;
+}
+
+.blip.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
