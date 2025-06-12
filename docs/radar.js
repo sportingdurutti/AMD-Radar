@@ -1,3 +1,4 @@
+
 // The MIT License (MIT)
 
 // Copyright (c) 2017-2024 Zalando SE
@@ -212,10 +213,13 @@ function radar_visualization(config) {
     .attr("height", scaled_height);
 
   var radar = svg.append("g");
-  if ("zoomed_quadrant" in config) {
-    svg.attr("viewBox", viewbox(config.zoomed_quadrant));
-  } else {
-    radar.attr("transform", translate(scaled_width / 2, scaled_height / 2).concat(`scale(${config.scale})`));
+  if ("zoomed_quadrant" in config) 
+    {
+      svg.attr("viewBox", viewbox(config.zoomed_quadrant));
+  } 
+  else 
+  {
+    radar.attr("transform", translate(scaled_width / 2, (scaled_height / 2)).concat(`scale(${config.scale})`));
   }
 
   var grid = radar.append("g");
@@ -323,7 +327,7 @@ function radar_visualization(config) {
       legend.append("text")
         .attr("transform", translate(
           config.legend_offset[quadrant].x,
-          config.legend_offset[quadrant].y - 45
+          config.legend_offset[quadrant].y - 55
         ))
         .text(config.quadrants[quadrant].name)
         .style("font-family", config.font_family)

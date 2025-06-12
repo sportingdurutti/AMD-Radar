@@ -229,6 +229,7 @@ function radar_visualization(config) {
     .attr("width", scaled_width)
     .attr("height", scaled_height);
 
+  const verticalOffset = -40; // negative means up
   var radar = svg.append("g");
     // Store global state for reuse
   if ("zoomed_quadrant" in config)
@@ -246,7 +247,7 @@ function radar_visualization(config) {
     } 
     else 
     {
-      radar.attr("transform", translate((scaled_width / 2),( scaled_height / 2) - 20).concat(`scale(${config.scale})`));
+      radar.attr("transform", translate((scaled_width / 2),( scaled_height / 2) + verticalOffset).concat(`scale(${config.scale})`));
     }
 
   const radarShift = (config.legend_column_width || 140) - 140;
@@ -315,12 +316,12 @@ function radar_visualization(config) {
     let dy = (index == null ? -16 : index * config.legend_line_height);
 
     if (ring % 2 === 1) {
-      dy = dy + 36 + previousHeight;
+      dy = dy + 16 + previousHeight;
     }
 
     return translate(
       config.legend_offset[quadrant].x + dx,
-      config.legend_offset[quadrant].y + dy
+      config.legend_offset[quadrant].y + dy - 5
     );
   }
 

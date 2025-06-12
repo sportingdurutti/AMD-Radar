@@ -102,7 +102,7 @@ div#footer p {
         display: flex;
         flex-direction: column;
         align-items: center;  /* ✅ Center each tag horizontally */
-        gap: 4px;             /* Optional: spacing between tags */
+        gap: 2px;             /* Optional: spacing between tags */
         padding: 10px;
     }
 
