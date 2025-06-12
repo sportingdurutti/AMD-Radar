@@ -244,7 +244,7 @@ svg#radar {
   z-index: 999;
   animation: fadeIn 0.3s ease;
   animation: fadeIn 0.7s ease forwards;
-    animation: fadeIn 0.3s ease forwards;
+  animation: fadeIn 0.3s ease forwards;
 
 }
 

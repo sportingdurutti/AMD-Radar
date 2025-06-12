@@ -507,35 +507,36 @@ function radar_visualization(config) {
   bubble.append("text")
     .style("font-family", config.font_family)
     .style("font-size", "10px")
+    .style("text-align", "center")
     .style("fill", "#fff");
   bubble.append("path")
-    .attr("d", "M 0,0 10,0 5,8 z")
+    // .attr("d", "M 0,0 10,0 5,8 z")
+    .attr("d", "M 0,8 10,8 5,0 z")  // Flipped triangle
     .style("fill", "#333");
 
   function showBubble(d) 
   {
     if (d.active || config.print_layout) 
     {
-       var tooltip = d3.select("#bubble text")
-      .text(d.label);
 
+      var tooltip = d3.select("#bubble text").text(d.label);
       var bbox = tooltip.node().getBBox();
 
       d3.select("#bubble")
-        .attr("transform", translate(d.x - bbox.width / 2, d.y - 16))
+        .attr("transform", translate(d.x - bbox.width / 2 - 20, d.y + 45))
         .style("opacity", 0.8)
         .transition()
         .duration(100)
-        .attr("transform", translate(d.x - bbox.width / 2, d.y - 16) + " scale(1.2)"); // ✅ Scale full group
+        .attr("transform", translate(d.x - bbox.width / 2 - 20, d.y + 45) + " scale(1.2)"); // ✅ Scale full group
 
       d3.select("#bubble rect")
-        .attr("x", -5)
-        .attr("y", -bbox.height)
+        .attr("x", - 5)
+        .attr("y", -bbox.height  )
         .attr("width", bbox.width + 10)
-        .attr("height", bbox.height + 4);
+        .attr("height", bbox.height + 7);
 
       d3.select("#bubble path")
-        .attr("transform", translate(bbox.width / 2 - 5, 3));
+        .attr("transform", translate(bbox.width / 2 - 5, - 22));
     }
   }
 
