@@ -1,102 +1,144 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: sans-serif;
-}
-div#heading,
-div#container,
-div#footer {
-    border: 1px solid black;
-}
-div#container {
-    position: relative;
-    margin: 0 auto;
-}
-div#heading {
-    margin: 0px auto -1px auto;
-}
-div#heading h1 {
-    margin: 5px;
-}
-div#left {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    /* background: #ccc; */
-    padding: 5px;
-    border-right: 1px solid black;
-}
-div#content {
-    margin-left: 211px;
-    background: white;
-    border: 1px solid white;
-    padding: 10px;
-}
-div#footer {
-    margin: -1px auto 10px auto;
-}
-div#footer p {
-    margin: 5px;
-}  
-
-.header {
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.brand,.header {
-    display: flex
+/* ---------------- TOP LAYOUT ---------------- */
+.top-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
 }
 
-.brand a {
-    margin-left: .5rem;
-    margin-right: .5rem;
-    font-weight: 600;
-    font-size: 1.125rem
+/* Left: Tag Selection */
+.left-panel {
+  width: 170px;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  background: #f5f5f5;
 }
 
-@media (min-width: 1024px) {
-    .brand a {
-        margin-left:2.5rem;
-        margin-right: 2.5rem
-    }
+/* Center: Radar */
+.radar-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
-  .wrap-img{
-      position:relative;
-      width: 50px;
-      height: 50px;
-  }
-  
-  .wrap-img div{
-      padding-top:56.5%;
-      background: #ccc;
+svg#radar {
+  width: 100%;
+  height: 100%;
+}
 
-  }
-  
-  .wrap-img picture{
-      position:absolute;
-      top:0;
-  }
+/* Right: Top Controls */
+.top-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
 
-  div#p{
-      font-size: 10px;
-      font-style: normal;
-      font-family: 'Courier New', Courier, monospace;
-  }
+#searchInput {
+  padding: 6px 12px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
 
-    .tag-container1 {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 10px;
-    }
+#resetRadarBtn {
+  padding: 6px 12px;
+  border-radius: 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ---------------- BOTTOM BAR ---------------- */
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: #f0f0f0;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+}
+
+/* Bottom-Left: Version */
+#version {
+  font-weight: bold;
+  color: #666;
+}
+
+/* Bottom-Center: Quadrants */
+.quadrants {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.quad-label {
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+.tooltip-icon {
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  background-color: #066f;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: bold;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  max-width: 250px; /* Optional: prevents too-long lines */
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%; /* adjust position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: normal;        /* Allows wrapping */
+  word-wrap: break-word;
+  overflow: visible;          /* Ensures full content shows */
+  line-height: 1.4;           /* Improves readability */
+}
+
+.tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
 
     .tag-container {
         display: flex;
@@ -104,20 +146,6 @@ div#footer p {
         align-items: center;  /* ✅ Center each tag horizontally */
         gap: 2px;             /* Optional: spacing between tags */
         padding: 10px;
-    }
-
-    .tag1 {
-      padding: 6px 14px;
-      border: 1px solid #ccc;
-      border-radius: 999px;
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 12px;
-      color: #333;
-      white-space: nowrap;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, border-color 0.2s;
-      user-select: none;
     }
 
     .tag {
@@ -133,28 +161,11 @@ div#footer p {
         word-break: break-word;
     }
 
-    .tag.selected1 {
-      background-color: black;
-      color: white;
-      border-color: black;
-    }
-
     .tag.selected {
          background-color: #004C99; /* Darker blue for selection */
         color: #FFFFFF;            /* White text */        
         font-weight: bold;
     }
-
-/* Remove this entirely */
-@keyframes pulse {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.25); }
-  100% { transform: scale(1); }
-}
-
-.pulse {
-  animation: pulse 0.4s ease-in-out;
-}
 
 .modal {
   display: none;
@@ -168,6 +179,7 @@ div#footer p {
   background-color: rgba(0,0,0,0.6);
 }
 
+/* Modal content with animation */
 .modal-content {
   background-color: #fff;
   margin: 10% auto;
@@ -177,6 +189,8 @@ div#footer p {
   font-family: Arial, sans-serif;
   font-size: 14px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  animation: scaleIn 0.4s ease forwards;
+  transform-origin: center;
 }
 
 .close-btn {
@@ -230,178 +244,39 @@ div#footer p {
   z-index: 999;
   animation: fadeIn 0.3s ease;
   animation: fadeIn 0.7s ease forwards;
+    animation: fadeIn 0.3s ease forwards;
 
 }
-
-.modal-content {
-  background: white;
-  border-radius: 10px;
-  padding: 30px;
-  width:50%;
-  max-width: 750px; 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-  font-family: 'Arial', sans-serif;
-  transform: scale(0.85);
-  opacity: 0;
-  animation: scaleIn 0.3s ease forwards;
-  animation: scaleIn 0.7s ease forwards;
-}
-
 
 @keyframes scaleIn {
-  from {
-    transform: scale(0.55);
+  0% {
+    transform: scale(0.8);
     opacity: 0;
   }
-  to {
+  100% {
     transform: scale(1);
     opacity: 1;
   }
 }
 
+/* Keyframes for closing animation */
 @keyframes scaleOut {
-  from {
+  0% {
     transform: scale(1);
     opacity: 1;
   }
-  to {
-    transform: scale(0.55);
+  100% {
+    transform: scale(0.8);
     opacity: 0;
   }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
- .top-controls {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: sans-serif;
-    z-index: 2000; /* Higher than modal */
-    margin-top: 0px;
-  }
-
-  #resetRadarBtn {
-    padding: 8px 12px;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: background-color 0.3s ease;
-  }
-
-  #resetRadarBtn:hover,
-  #resetRadarBtn:focus {
-    background-color: #666;
-    outline: none;
-  }
-
-  #searchContainer input {
-    padding: 6px 28px 6px 28px;
-    border-radius: 999px;
-    border: none;
-    background: #f7f5f2;
-    color: #888;
-    font-size: 14px;
-    width: 160px;
-  }
-
-  #searchContainer input:focus {
-    outline: 2px solid #aaa;
-    background-color: #fff;
-  }
-
-  .search-icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #aaa;
-  }
-
-  .shortcut-hint {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px;
-    color: #aaa;
-    pointer-events: none;
-  }
-
-  .ring-toolbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f3f5;
-  padding: 12px 10px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  font-family: Arial, sans-serif;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 0px; /* Adjust depending on position relative to search/reset */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
-
-.ring-label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: #222;
-}
-
-.tooltip-icon {
-  margin-left: 6px;
-  cursor: pointer;
-  font-size: 12px;
-  color: white;
-  background-color: #066f;
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  font-weight: bold;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  background-color: #222;
-  color: #fff;
-  text-align: left;
-  padding: 8px 10px;
-  border-radius: 4px;
-  position: absolute;
-  top: -45px;
-  left: 0;
-  width: 240px;
-  font-size: 12px;
-  z-index: 999;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.3);
-}
-
-.tooltip-icon:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
