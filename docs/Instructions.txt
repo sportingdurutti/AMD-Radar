@@ -1,0 +1,10 @@
+c:/Projects/AMD_Radar/.venv/Scripts/python.exe c:/Projects/AMD_Radar/AMD.py
+yarn start
+git status
+git add .
+git commit -m "new Excel"
+git config --global http.proxy http://username:pwd@proxy:port
+git config --global https.proxy https://username:pwd@proxy:port
+git push origin master
+git push private-origin master
+Test
