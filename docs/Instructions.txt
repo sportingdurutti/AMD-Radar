@@ -7,4 +7,3 @@ git config --global http.proxy http://username:pwd@proxy:port
 git config --global https.proxy https://username:pwd@proxy:port
 git push origin master
 git push private-origin master
-Test
