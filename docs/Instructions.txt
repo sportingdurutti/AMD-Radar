@@ -3,7 +3,7 @@ yarn bump-version
 yarn start
 git status
 git add .
-git commit -m "new Excel"
+git commit -m "new Version"
 git config --global http.proxy http://username:pwd@proxy:port
 git config --global https.proxy https://username:pwd@proxy:port
 git push origin master
